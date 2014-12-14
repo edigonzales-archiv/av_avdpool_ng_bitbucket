@@ -22,6 +22,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.catais.avdpool.ili2ch.Ili2ch;
 import org.catais.avdpool.utils.ImportProperties;
+import org.catais.avdpool.utils.Reindex;
+import org.catais.avdpool.utils.Vacuum;
 
 import ch.interlis.ili2c.Ili2cException;
 
@@ -120,7 +122,11 @@ public class App
 							logger.info("doImport = false");
 						}
 						logger.info("End data import.");
-
+						
+						// LV03 -> LV95
+						
+						
+						
 
 					// exceptions for each loop (file)
 					} catch (NumberFormatException e) {
@@ -134,8 +140,7 @@ public class App
 					} 
 				}
 			}
-
-
+			
 			catch (IOException e) {
 				e.printStackTrace();
 				logger.fatal(e.getMessage());
@@ -144,19 +149,23 @@ public class App
 				e.printStackTrace();
 				logger.fatal(e.getMessage());
 				throw new NumberFormatException(e.getMessage());
-//			} catch (ClassNotFoundException e) {
-//				e.printStackTrace();
-//				logger.fatal(e.getMessage());
-//				throw new Exception(e.getMessage());
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//				logger.fatal(e.getMessage());
 			} catch (Exception e) {
 				e.printStackTrace();
 				logger.fatal(e.getMessage());
 			}  
 
-				
+			// reindex tables
+            logger.info("Start Reindexing...");
+            Reindex reindex = new Reindex(params);
+            reindex.run();
+            logger.info("End Reindexing.");
+
+			// vacuum tables
+            logger.info("Start Vacuum...");
+            Vacuum vacuum = new Vacuum(params);
+            vacuum.run();
+            logger.info("End Vacuum.");
+	
         } catch (FileNotFoundException e) {
             logger.fatal(e.getMessage());
         } catch (IOException e) {
