@@ -21,6 +21,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.catais.avdpool.ili2ch.Ili2ch;
+import org.catais.avdpool.ili2freeframe.Ili2FreeFrame;
 import org.catais.avdpool.utils.ImportProperties;
 import org.catais.avdpool.utils.Reindex;
 import org.catais.avdpool.utils.Vacuum;
@@ -99,34 +100,39 @@ public class App
 						logger.debug(entry.toAbsolutePath());
 
 						// convert from canton to federation model
-						Path cantonFilePath = entry.toAbsolutePath();						
-						Path federationFilePath = Paths.get(federationDirLV03, "ch_" + fileName.substring(0, 6) + ".itf");
+						Path cantonFilePathLV03 = entry.toAbsolutePath();						
+						Path federationFilePathLV03 = Paths.get(federationDirLV03, "ch_" + fileName.substring(0, 6) + ".itf");
 
 						logger.info("Start conversion...");
-						Ili2ch ili2ch = new Ili2ch(cantonFilePath.toString(), federationFilePath.toString());
+						Ili2ch ili2ch = new Ili2ch(cantonFilePathLV03.toString(), federationFilePathLV03.toString());
 						ili2ch.convert();
 						logger.info("End of conversion.");
 
 						// import data
-						logger.info("Start data import...");
+						logger.info("Start data import...");		
 						if (doImport) {
-							IliReader iliReader = new IliReader(federationFilePath.toAbsolutePath().toString(), "21781", params);
+							IliReader iliReader = new IliReader(federationFilePathLV03.toAbsolutePath().toString(), "21781", params);
 							iliReader.setTidPrefix(prefix);
 							iliReader.startTransaction();
 							iliReader.delete(bfsnr, los);
 							iliReader.read(bfsnr, los);  
 							iliReader.commitTransaction();
 							
-							Files.copy(cantonFilePath, Paths.get(cantonDirLV03, fileName), REPLACE_EXISTING);
+							Files.copy(cantonFilePathLV03, Paths.get(cantonDirLV03, fileName), REPLACE_EXISTING);
 						} else {
 							logger.info("doImport = false");
 						}
 						logger.info("End data import.");
 						
 						// LV03 -> LV95
+						Path federationFilePathLV95 = Paths.get(federationDirLV95, "ch_lv95_" + fileName.substring(0, 6) + ".itf");
+						Ili2FreeFrame ili2freeframe = new Ili2FreeFrame("DM01AVCH24LV95D", federationFilePathLV03.toString(), federationFilePathLV95.toString());
+						ili2freeframe.transform();
 						
-						
-						
+						Path cantonFilePathLV95 = Paths.get(cantonDirLV95, "lv95_" + fileName.substring(0, 6) + ".itf");
+						ili2freeframe = new Ili2FreeFrame("DM01AVSO24LV95", cantonFilePathLV03.toString(), cantonFilePathLV95.toString());
+						ili2freeframe.transform();
+
 
 					// exceptions for each loop (file)
 					} catch (NumberFormatException e) {

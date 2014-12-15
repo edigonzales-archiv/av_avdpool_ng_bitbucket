@@ -11,7 +11,7 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.geotools.data.shapefile.ShapefileDataStore; // ah, package in pom.xml
+import org.geotools.data.shapefile.ShapefileDataStore;  
 import org.geotools.data.shapefile.ShapefileDataStoreFactory;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureIterator;

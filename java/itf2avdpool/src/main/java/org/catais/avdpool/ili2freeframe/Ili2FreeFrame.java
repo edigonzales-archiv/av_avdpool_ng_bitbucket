@@ -11,7 +11,7 @@ import java.util.Map;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.catais.freeframe.FreeFrame;
+import org.catais.avdpool.ili2freeframe.FreeFrame;
 
 import ch.interlis.ili2c.Ili2c;
 import ch.interlis.ili2c.Ili2cException;
@@ -34,13 +34,20 @@ public class Ili2FreeFrame {
 	private IoxReader ioxReader = null;
 	private IoxWriter ioxWriter = null;
 	private FreeFrame freeFrame = null;
+	private String inIli = null;
+	private String outIli = null;
+	private String inItf = null;
+	private String outItf = null;
 
-	public Ili2FreeFrame() {
-
+	public Ili2FreeFrame(String outIli, String inItf, String outItf) {
+		this.inItf = inItf;
+		this.outItf = outItf;
+		
+		this.inIli = getModelNameFromItf(inItf);
+		this.outIli = outIli;
 	}
 
-
-	public void transform(String inIli, String outIli, String inItf, String outItf) throws Ili2cException {
+	public void transform() throws Ili2cException {
 		logger.setLevel(Level.INFO);
 
 		freeFrame = new FreeFrame();
@@ -190,12 +197,10 @@ public class Ili2FreeFrame {
 		}
 	}
 
-	
-	
 
 	private ch.interlis.ili2c.metamodel.TransferDescription getTransferDescription(String iliFile) throws Ili2cException {
     	IliManager manager = new IliManager();
-    	String repositories[] = new String[]{"http://localhost/~stefan/models/", "http://www.sogeo.ch/models/", "http://models.geo.admin.ch/"};
+    	String repositories[] = new String[]{"http://www.catais.org/models/", "http://models.geo.admin.ch/"};
     	manager.setRepositories(repositories);
     	ArrayList modelNames = new ArrayList();
     	modelNames.add(iliFile);
@@ -207,6 +212,52 @@ public class Ili2FreeFrame {
 			throw new IllegalArgumentException("INTERLIS compiler failed");
 		}
 		return iliTd; 
+	}
+
+	
+	private String getModelNameFromItf(String itfFileName) {
+		{
+			ItfReader ioxReader = null;
+			try {
+				ioxReader = new ch.interlis.iom_j.itf.ItfReader(new java.io.File(itfFileName));
+				IoxEvent event = ioxReader.read();
+				StartBasketEvent be = null;
+				do {
+					event = ioxReader.read();
+					if (event instanceof StartBasketEvent) {
+						be = (StartBasketEvent) event;
+						break;
+					}
+				}
+				while (!( event instanceof EndTransferEvent));
+				ioxReader.close();
+				ioxReader = null;
+
+				if (be == null ) {
+					logger.error( "no baskets in transfer-file" ); 
+					throw new IllegalArgumentException( "no baskets in transfer-file" ); 
+				} 
+				else {
+					String namev[] = be.getType().split("\\."); 
+					return namev[0]; 
+				}
+			}
+			catch (IoxException ex) { 
+				logger.error( ex.getMessage() ); 
+			} 
+			finally {   
+				if (ioxReader != null) { 
+					try { 
+						ioxReader.close(); 
+					}
+					catch (IoxException ex) { 
+						logger.error(ex.getMessage()); 
+					} 
+					ioxReader=null; 
+				}
+			} 
+			return null;
+		}
 	}
 
 }
