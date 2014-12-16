@@ -199,7 +199,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT &apos;(&apos; || array_to_string(array_agg(gem_bfs), &apos;, &apos;) || &apos;)&apos; as gem_bfs
 FROM
 (

@@ -5,6 +5,7 @@
     <description/>
     <extended_description/>
     <trans_version/>
+    <trans_status>0</trans_status>
     <directory>&#47;</directory>
     <parameters>
     </parameters>
@@ -32,7 +33,7 @@
     <size_rowset>10000</size_rowset>
     <sleep_time_empty>50</sleep_time_empty>
     <sleep_time_full>50</sleep_time_full>
-    <unique_connections>N</unique_connections>
+    <unique_connections>Y</unique_connections>
     <feedback_shown>Y</feedback_shown>
     <feedback_size>50000</feedback_size>
     <using_thread_priorities>Y</using_thread_priorities>
@@ -59,8 +60,8 @@
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -145,7 +146,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>rosebud2</database>
+    <database>xanadu2</database>
     <port>5432</port>
     <username>stefan</username>
     <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
@@ -214,7 +215,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>--SELECT &apos;(&apos; || array_to_string(array_agg(gem_bfs), &apos;, &apos;) || &apos;)&apos; as gem_bfs
 --FROM
 --(

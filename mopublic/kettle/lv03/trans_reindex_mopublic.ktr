@@ -177,7 +177,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT table_schema, table_name FROM information_schema.tables &#xa;WHERE table_schema &#x3d; &#x27;av_mopublic&#x27;&#xa;&#xa;--AND table_name &#x3d; &#x27;fixpunktekategorie__lfp&#x27;</sql>
     <limit>0</limit>
     <lookup/>
@@ -203,7 +203,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>

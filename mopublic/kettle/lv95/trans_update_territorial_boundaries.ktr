@@ -294,7 +294,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT
   ogc_fid
 , tid
@@ -384,7 +384,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT
   ogc_fid
 , tid
@@ -489,7 +489,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT
   ogc_fid
 , tid
@@ -683,7 +683,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT
   ogc_fid
 , tid

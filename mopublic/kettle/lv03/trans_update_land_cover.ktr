@@ -208,7 +208,7 @@ kann es vorkommen, dass es - fälschlicherweise - doppelte Zuweisungen gibt.
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.bodenbedeckung__bbtext WHERE bfsnr = ?;
@@ -261,7 +261,7 @@ WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND a.tid::text = b.objektnamepos_von::tex
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.bodenbedeckung__boflaeche WHERE bfsnr = ?;
@@ -342,7 +342,7 @@ LEFT JOIN
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.bodenbedeckung__projbbtext WHERE bfsnr = ?;
@@ -397,7 +397,7 @@ WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND a.tid::text = b.projobjektnamepos_von:
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.bodenbedeckung__projboflaeche WHERE bfsnr = ?;

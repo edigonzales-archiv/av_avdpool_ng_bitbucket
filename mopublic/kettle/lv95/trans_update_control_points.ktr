@@ -193,7 +193,7 @@ PostgreSQL&#47;Postgis Kombinationen braucht?!
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <sql>SELECT
   ogc_fid
 , tid

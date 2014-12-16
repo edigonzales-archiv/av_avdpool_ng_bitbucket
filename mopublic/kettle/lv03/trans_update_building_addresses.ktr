@@ -209,7 +209,7 @@ wobei ein Fehler darauf zurückzuführen ist, dass das Haus durch die Gemeindegr
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.gebaeudeadressen__gebaeudeeingang WHERE bfsnr = ?;
@@ -310,7 +310,7 @@ AND ST_Distance(eingang.lage, plz.geom_plz) = 0;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.gebaeudeadressen__hausnummerpos WHERE bfsnr = ?;
@@ -373,7 +373,7 @@ AND 0 = c.code;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.gebaeudeadressen__lokalisationsnamepos WHERE bfsnr = ?;
@@ -435,7 +435,7 @@ AND b.lokalisationsnamepos_von = a.tid;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.gebaeudeadressen__lokalisationsname WHERE bfsnr = ?;

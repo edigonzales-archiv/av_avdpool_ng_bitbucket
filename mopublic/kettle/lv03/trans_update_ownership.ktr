@@ -217,7 +217,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__grenzpunkt WHERE bfsnr = ?;
@@ -262,7 +262,7 @@ AND b.punktzeichen = e.code;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaft WHERE bfsnr = ?;
@@ -307,7 +307,7 @@ AND d.tid = a.entstehung;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr = ?;
@@ -371,7 +371,7 @@ AND a.tid::text = b.grundstueckpos_von::text;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaft WHERE bfsnr = ?;
@@ -416,7 +416,7 @@ AND d.tid = a.entstehung;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr = ?;
@@ -480,7 +480,7 @@ AND a.tid::text = b.projgrundstueckpos_von::text;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerk WHERE bfsnr = ?;
@@ -542,7 +542,7 @@ AND (a.art - 1) = e.code;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr = ?;
@@ -609,7 +609,7 @@ AND a.tid::text = b.projgrundstueckpos_von::text;
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerk WHERE bfsnr = ?;
@@ -671,7 +671,7 @@ AND (a.art - 1) = e.code;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;

@@ -210,7 +210,7 @@ So ist es jetzt momentan umgesetzt. Ist das sinnvoll? Oder reicht eigentlich die
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.fixpunktekategorie__lfp WHERE bfsnr = ?;

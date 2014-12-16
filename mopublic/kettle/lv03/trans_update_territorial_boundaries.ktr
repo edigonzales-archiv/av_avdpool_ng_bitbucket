@@ -199,7 +199,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.hoheitsgrenzen__gemeindegrenze WHERE bfsnr = ?;
@@ -261,7 +261,7 @@ AND c.tid = b.entstehung;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.hoheitsgrenzen__hoheitsgrenzpunkt WHERE bfsnr = ?;
@@ -306,7 +306,7 @@ AND b.punktzeichen = e.code;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.hoheitsgrenzen__projgemeindegrenze WHERE bfsnr = ?;
@@ -350,7 +350,7 @@ AND c.tid = b.entstehung;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.hoheitsgrenzen__uebrigehoheitsgrenzen WHERE bfsnr = ?;

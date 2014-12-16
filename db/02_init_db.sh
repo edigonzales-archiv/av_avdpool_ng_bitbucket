@@ -5,7 +5,8 @@ ADMINPWD="malice"
 USER="mspublic"
 USERPWD="mspublic"
 
-DB_NAME="rosebud2"
+#DB_NAME="rosebud2"
+DB_NAME="strelnikow"
 PG_VERSION="9.3"
 
 echo "Delete database: $DB_NAME"

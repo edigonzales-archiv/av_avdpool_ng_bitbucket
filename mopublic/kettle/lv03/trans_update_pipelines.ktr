@@ -225,7 +225,7 @@ unschöne &quot;DISTINCT&quot; zum Zuge.</note>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.rohrleitungen__linienelement WHERE bfsnr = ?;
@@ -271,7 +271,7 @@ AND c.gueltigkeit = e.code;</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>xanadu2</connection>
+    <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.rohrleitungen__linienelementnamepos WHERE bfsnr = ?;
