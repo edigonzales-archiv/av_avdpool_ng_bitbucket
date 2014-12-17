@@ -60,8 +60,8 @@
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -136,10 +136,8 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -854,11 +852,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
 , hali
 , vali
 , bfsnr
-, y
-, x
-, rot
-, hali_txt
-, vali_txt
 FROM av_mopublic.liegenschaften__liegenschaftpos
 WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
@@ -937,26 +930,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
         <field>
           <column_name>bfsnr</column_name>
           <stream_name>bfsnr</stream_name>
-        </field>
-        <field>
-          <column_name>y</column_name>
-          <stream_name>y</stream_name>
-        </field>
-        <field>
-          <column_name>x</column_name>
-          <stream_name>x</stream_name>
-        </field>
-        <field>
-          <column_name>rot</column_name>
-          <stream_name>rot</stream_name>
-        </field>
-        <field>
-          <column_name>hali_txt</column_name>
-          <stream_name>hali_txt</stream_name>
-        </field>
-        <field>
-          <column_name>vali_txt</column_name>
-          <stream_name>vali_txt</stream_name>
         </field>
     </fields>
      <cluster_schema/>
@@ -1104,11 +1077,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
 , hali
 , vali
 , bfsnr
-, y
-, x
-, rot
-, hali_txt
-, vali_txt
 FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
 WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
@@ -1187,26 +1155,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
         <field>
           <column_name>bfsnr</column_name>
           <stream_name>bfsnr</stream_name>
-        </field>
-        <field>
-          <column_name>y</column_name>
-          <stream_name>y</stream_name>
-        </field>
-        <field>
-          <column_name>x</column_name>
-          <stream_name>x</stream_name>
-        </field>
-        <field>
-          <column_name>rot</column_name>
-          <stream_name>rot</stream_name>
-        </field>
-        <field>
-          <column_name>hali_txt</column_name>
-          <stream_name>hali_txt</stream_name>
-        </field>
-        <field>
-          <column_name>vali_txt</column_name>
-          <stream_name>vali_txt</stream_name>
         </field>
     </fields>
      <cluster_schema/>
@@ -1349,11 +1297,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
 , hali
 , vali
 , bfsnr
-, y
-, x
-, rot
-, hali_txt
-, vali_txt
 FROM av_mopublic.liegenschaften__projliegenschaftpos
 WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>
@@ -1432,26 +1375,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
         <field>
           <column_name>bfsnr</column_name>
           <stream_name>bfsnr</stream_name>
-        </field>
-        <field>
-          <column_name>y</column_name>
-          <stream_name>y</stream_name>
-        </field>
-        <field>
-          <column_name>x</column_name>
-          <stream_name>x</stream_name>
-        </field>
-        <field>
-          <column_name>rot</column_name>
-          <stream_name>rot</stream_name>
-        </field>
-        <field>
-          <column_name>hali_txt</column_name>
-          <stream_name>hali_txt</stream_name>
-        </field>
-        <field>
-          <column_name>vali_txt</column_name>
-          <stream_name>vali_txt</stream_name>
         </field>
     </fields>
      <cluster_schema/>
@@ -1564,26 +1487,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
           <column_name>bfsnr</column_name>
           <stream_name>bfsnr</stream_name>
         </field>
-        <field>
-          <column_name>y</column_name>
-          <stream_name>y</stream_name>
-        </field>
-        <field>
-          <column_name>x</column_name>
-          <stream_name>x</stream_name>
-        </field>
-        <field>
-          <column_name>rot</column_name>
-          <stream_name>rot</stream_name>
-        </field>
-        <field>
-          <column_name>hali_txt</column_name>
-          <stream_name>hali_txt</stream_name>
-        </field>
-        <field>
-          <column_name>vali_txt</column_name>
-          <stream_name>vali_txt</stream_name>
-        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -1692,11 +1595,6 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
 , hali
 , vali
 , bfsnr
-, y
-, x
-, rot
-, hali_txt
-, vali_txt
 FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos
 WHERE bfsnr IN ${GEM_BFS};</sql>
     <limit>0</limit>

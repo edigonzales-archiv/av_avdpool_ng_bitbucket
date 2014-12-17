@@ -82,8 +82,8 @@
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -158,10 +158,8 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -312,7 +310,7 @@ AND d.tid = a.entstehung;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.liegenschaften__liegenschaftpos(tid, liegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.liegenschaften__liegenschaftpos(tid, liegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr)
 SELECT b.tid as tid, grundstueckpos_von as liegenschaftpos_von, a.nbident, a.nummer, b.pos,
         CASE
             WHEN b.ori IS NULL THEN 100::double precision
@@ -326,19 +324,7 @@ SELECT b.tid as tid, grundstueckpos_von as liegenschaftpos_von, a.nbident, a.num
             WHEN b.vali IS NULL THEN 2
             ELSE b.vali
         END as vali,
-b.gem_bfs AS bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, 
-        CASE
-            WHEN b.ori IS NULL THEN 0::double precision
-            ELSE (100::double precision - b.ori) * 0.9::double precision
-        END AS rot, 
-        CASE 
-            WHEN b.hali_txt IS NULL THEN &apos;Center&apos;
-            ELSE b.hali_txt
-        END as hali_txt,
-        CASE 
-            WHEN b.vali_txt IS NULL THEN &apos;Half&apos;
-            ELSE b.vali_txt
-        END as vali_txt
+b.gem_bfs AS bfsnr
 FROM av_avdpool_ch.liegenschaften_grundstueck a, av_avdpool_ch.liegenschaften_grundstueckpos b
 WHERE a.gem_bfs = ? 
 AND b.gem_bfs = ?
@@ -421,7 +407,7 @@ AND d.tid = a.entstehung;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.liegenschaften__projliegenschaftpos(tid, projliegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.liegenschaften__projliegenschaftpos(tid, projliegenschaftpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr)
 SELECT b.tid as tid, projgrundstueckpos_von as projliegenschaftpos_von, a.nbident, a.nummer, b.pos,
         CASE
             WHEN b.ori IS NULL THEN 100::double precision
@@ -435,19 +421,7 @@ SELECT b.tid as tid, projgrundstueckpos_von as projliegenschaftpos_von, a.nbiden
             WHEN b.vali IS NULL THEN 2
             ELSE b.vali
         END as vali,
-b.gem_bfs AS bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, 
-        CASE
-            WHEN b.ori IS NULL THEN 0::double precision
-            ELSE (100::double precision - b.ori) * 0.9::double precision
-        END AS rot, 
-        CASE 
-            WHEN b.hali_txt IS NULL THEN &apos;Center&apos;
-            ELSE b.hali_txt
-        END as hali_txt,
-        CASE 
-            WHEN b.vali_txt IS NULL THEN &apos;Half&apos;
-            ELSE b.vali_txt
-        END as vali_txt
+b.gem_bfs AS bfsnr
 FROM av_avdpool_ch.liegenschaften_projgrundstueck a, av_avdpool_ch.liegenschaften_projgrundstueckpos b
 WHERE a.gem_bfs = ? 
 AND b.gem_bfs = ?
@@ -547,7 +521,7 @@ AND (a.art - 1) = e.code;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.liegenschaften__projselbstrecht_bergwerkpos(tid, selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.liegenschaften__projselbstrecht_bergwerkpos(tid, selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr)
 SELECT b.tid as tid, projgrundstueckpos_von as projselbstrecht_bergwerkpos_von, a.nbident, a.nummer, b.pos,
         CASE
             WHEN b.ori IS NULL THEN 100::double precision
@@ -561,19 +535,7 @@ SELECT b.tid as tid, projgrundstueckpos_von as projselbstrecht_bergwerkpos_von, 
             WHEN b.vali IS NULL THEN 2
             ELSE b.vali
         END as vali,
-b.gem_bfs AS bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, 
-        CASE
-            WHEN b.ori IS NULL THEN 0::double precision
-            ELSE (100::double precision - b.ori) * 0.9::double precision
-        END AS rot, 
-        CASE 
-            WHEN b.hali_txt IS NULL THEN &apos;Center&apos;
-            ELSE b.hali_txt
-        END as hali_txt,
-        CASE 
-            WHEN b.vali_txt IS NULL THEN &apos;Half&apos;
-            ELSE b.vali_txt
-        END as vali_txt
+b.gem_bfs AS bfsnr
 FROM av_avdpool_ch.liegenschaften_projgrundstueck a, av_avdpool_ch.liegenschaften_projgrundstueckpos b
 WHERE a.gem_bfs = ? 
 AND b.gem_bfs = ?
@@ -676,7 +638,7 @@ AND (a.art - 1) = e.code;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.liegenschaften__selbstrecht_bergwerkpos(tid, selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.liegenschaften__selbstrecht_bergwerkpos(tid, selbstrecht_bergwerkpos_von, nbident, nummer, pos, ori, hali, vali, bfsnr)
 SELECT b.tid as tid, grundstueckpos_von as selbstrecht_bergwerkpos_von, a.nbident, a.nummer, b.pos,
         CASE
             WHEN b.ori IS NULL THEN 100::double precision
@@ -690,19 +652,7 @@ SELECT b.tid as tid, grundstueckpos_von as selbstrecht_bergwerkpos_von, a.nbiden
             WHEN b.vali IS NULL THEN 2
             ELSE b.vali
         END as vali,
-b.gem_bfs AS bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, 
-        CASE
-            WHEN b.ori IS NULL THEN 0::double precision
-            ELSE (100::double precision - b.ori) * 0.9::double precision
-        END AS rot, 
-        CASE 
-            WHEN b.hali_txt IS NULL THEN &apos;Center&apos;
-            ELSE b.hali_txt
-        END as hali_txt,
-        CASE 
-            WHEN b.vali_txt IS NULL THEN &apos;Half&apos;
-            ELSE b.vali_txt
-        END as vali_txt
+b.gem_bfs AS bfsnr
 FROM av_avdpool_ch.liegenschaften_grundstueck a, av_avdpool_ch.liegenschaften_grundstueckpos b
 WHERE a.gem_bfs = ? 
 AND b.gem_bfs = ?

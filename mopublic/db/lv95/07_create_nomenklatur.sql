@@ -60,11 +60,11 @@ CREATE TABLE av_mopublic.nomenklatur__namenpos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT nomenklatur__namenpos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (

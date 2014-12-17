@@ -115,11 +115,11 @@ CREATE TABLE av_mopublic.liegenschaften__liegenschaftpos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT liegenschaften__liegenschaftpos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -235,11 +235,11 @@ CREATE TABLE av_mopublic.liegenschaften__selbstrecht_bergwerkpos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT liegenschaften__selbstrecht_bergwerkpos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -350,11 +350,11 @@ CREATE TABLE av_mopublic.liegenschaften__projliegenschaftpos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT liegenschaften__projliegenschaftpos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -472,11 +472,11 @@ CREATE TABLE av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT liegenschaften__projselbstrecht_bergwerkpos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (

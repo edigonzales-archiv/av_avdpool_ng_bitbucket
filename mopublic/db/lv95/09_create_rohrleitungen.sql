@@ -64,11 +64,11 @@ CREATE TABLE av_mopublic.rohrleitungen__linienelementnamepos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT rohrleitungen__linienelementnamepos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (

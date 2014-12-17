@@ -82,8 +82,8 @@
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -158,10 +158,8 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -282,7 +280,7 @@ UNION ALL
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.nomenklatur__namenpos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.nomenklatur__namenpos (tid, namenpos_von, kategorie, &quot;name&quot;, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.nomenklatur__namenpos (tid, namenpos_von, kategorie, &quot;name&quot;, pos, ori, hali, vali, bfsnr)
 SELECT tid, posname_of as namenpos_von, category as kategorie, name as &quot;name&quot;, pos as pos, 
  CASE WHEN ori IS NULL
   THEN 100
@@ -296,19 +294,7 @@ SELECT tid, posname_of as namenpos_von, category as kategorie, name as &quot;nam
   THEN 2
   ELSE vali
  END as vali,
-fosnr as bfsnr, ST_X(pos) AS y, ST_Y(pos) AS x, 
- CASE WHEN ori IS NULL
-  THEN 0
-  ELSE (100::double precision - ori) * 0.9::double precision
- END as rot,
- CASE WHEN hali_txt IS NULL
-  THEN &apos;Center&apos;
-  ELSE hali_txt
- END as hali_txt,
- CASE WHEN vali_txt IS NULL
-  THEN &apos;Half&apos;
-  ELSE vali_txt
- END as vali_txt
+fosnr as bfsnr
 FROM (
   SELECT a.ogc_fid, a.tid, a.flurnamepos_von as posname_of, c.designation_d as category, b.name, a.pos, CASE WHEN a.ori IS NULL THEN 100 ELSE a.ori END as ori, a.hali, a.hali_txt, a.vali, a.vali_txt, a.gem_bfs as fosnr
   FROM av_avdpool_ch.nomenklatur_flurnamepos as a, av_avdpool_ch.nomenklatur_flurname as b, av_mopublic_meta.local_names_type as c

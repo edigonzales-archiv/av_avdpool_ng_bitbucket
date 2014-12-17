@@ -58,11 +58,11 @@ CREATE TABLE av_mopublic.gebaeudeadressen__lokalisationsnamepos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT gebaeudeadressen__lokalisationsnamepos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -194,11 +194,11 @@ CREATE TABLE av_mopublic.gebaeudeadressen__hausnummerpos
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT gebaeudeadressen__hausnummerpos_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (

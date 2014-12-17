@@ -61,11 +61,11 @@ CREATE TABLE av_mopublic.einzelobjekte__flaechenelementtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT einzelobjekte__flaechenelementtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -169,11 +169,11 @@ CREATE TABLE av_mopublic.einzelobjekte__linienelementtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT einzelobjekte__linienelementtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -277,11 +277,11 @@ CREATE TABLE av_mopublic.einzelobjekte__punktelementtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT einzelobjekte__punktelementtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (

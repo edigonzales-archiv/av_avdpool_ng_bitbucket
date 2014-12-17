@@ -90,8 +90,8 @@ unschöne &quot;DISTINCT&quot; zum Zuge.</note>
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -166,10 +166,8 @@ unschöne &quot;DISTINCT&quot; zum Zuge.</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -276,8 +274,8 @@ AND c.gueltigkeit = e.code;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.rohrleitungen__linienelementnamepos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.rohrleitungen__linienelementnamepos (tid, linienelementnamepos_von, betreiber, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
-SELECT DISTINCT ON (b.ogc_fid) b.tid as tid, a.tid as linienelementnamepos_von, a.betreiber as betreiber, b.pos as pos, b.ori as ori, b.hali, b.vali, b.gem_bfs as bfsnr,  ST_X(pos) AS y, ST_Y(pos) AS x, (100::double precision - ori) * 0.9::double precision AS rot, hali_txt, vali_txt  
+INSERT INTO av_mopublic.rohrleitungen__linienelementnamepos (tid, linienelementnamepos_von, betreiber, pos, ori, hali, vali, bfsnr)
+SELECT DISTINCT ON (b.ogc_fid) b.tid as tid, a.tid as linienelementnamepos_von, a.betreiber as betreiber, b.pos as pos, b.ori as ori, b.hali, b.vali, b.gem_bfs as bfsnr
 FROM
   (
     SELECT DISTINCT b.linienelement_von, b.tid, a.betreiber, a.gem_bfs

@@ -60,11 +60,11 @@ CREATE TABLE av_mopublic.bodenbedeckung__bbtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT bodenbedeckung__bbtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -167,11 +167,11 @@ CREATE TABLE av_mopublic.bodenbedeckung__projbbtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT bodenbedeckung__projbbtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (

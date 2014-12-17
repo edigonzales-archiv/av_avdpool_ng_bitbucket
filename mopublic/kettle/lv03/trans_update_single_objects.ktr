@@ -91,8 +91,8 @@
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -189,10 +189,8 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -298,7 +296,7 @@ LEFT JOIN
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.einzelobjekte__flaechenelementtext WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.einzelobjekte__flaechenelementtext (tid, flaechenelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.einzelobjekte__flaechenelementtext (tid, flaechenelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr)
 SELECT DISTINCT a.tid as tid, a.objektname_von as flaechenelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, 
  CASE WHEN b.hali IS NULL
   THEN 1
@@ -308,15 +306,7 @@ SELECT DISTINCT a.tid as tid, a.objektname_von as flaechenelementtext_von, e.des
   THEN 2
   ELSE b.vali
  END as vali,
-a.gem_bfs as bfsnr,st_x(b.pos) AS y, st_y(b.pos) AS x, (100::double precision - b.ori) * 0.9::double precision AS rot, 
- CASE WHEN b.hali_txt IS NULL
-  THEN &apos;Center&apos;
-  ELSE b.hali_txt
- END as hali_txt,
- CASE WHEN b.vali_txt IS NULL
-  THEN &apos;Half&apos;
-  ELSE b.vali_txt
- END as vali_txt
+a.gem_bfs as bfsnr
 FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_flaechenelement as d, av_mopublic_meta.text_type as e 
 WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND d.gem_bfs = ?
 AND b.objektnamepos_von = a.tid
@@ -427,7 +417,7 @@ WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.cod
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.einzelobjekte__linienelementtext WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.einzelobjekte__linienelementtext (tid, linienelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.einzelobjekte__linienelementtext (tid, linienelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr)
 SELECT DISTINCT a.tid as tid, a.objektname_von as linienelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, 
  CASE WHEN b.hali IS NULL
   THEN 1
@@ -437,15 +427,7 @@ SELECT DISTINCT a.tid as tid, a.objektname_von as linienelementtext_von, e.desig
   THEN 2
   ELSE b.vali
  END as vali,
-a.gem_bfs AS bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, (100::double precision - b.ori) * 0.9::double precision AS rot,  
- CASE WHEN b.hali_txt IS NULL
-  THEN &apos;Center&apos;
-  ELSE b.hali_txt
- END as hali_txt,
- CASE WHEN b.vali_txt IS NULL
-  THEN &apos;Half&apos;
-  ELSE b.vali_txt
- END as vali_txt
+a.gem_bfs AS bfsnr
 FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_linienelement as d, av_mopublic_meta.text_type as e 
 WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND d.gem_bfs = ?
 AND b.objektnamepos_von = a.tid
@@ -539,7 +521,7 @@ WHERE b.art::double precision = c.code AND b.qualitaet::double precision = d.cod
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.einzelobjekte__punktelementtext WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.einzelobjekte__punktelementtext (tid, punktelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.einzelobjekte__punktelementtext (tid, punktelementtext_von, typ, nummer_name, pos, ori, hali, vali, bfsnr)
 SELECT DISTINCT a.tid as tid, a.objektname_von as punktelementtext_von, e.designation_e as typ, a.name as nummer_name, b.pos as pos, b.ori as ori, 
  CASE WHEN b.hali IS NULL
   THEN 1
@@ -548,15 +530,7 @@ SELECT DISTINCT a.tid as tid, a.objektname_von as punktelementtext_von, e.design
  CASE WHEN b.vali IS NULL
   THEN 2
   ELSE b.vali
- END as vali,a.gem_bfs as bfsnr,st_x(b.pos) AS y, st_y(b.pos) AS x, (100::double precision - b.ori) * 0.9::double precision AS rot, 
- CASE WHEN b.hali_txt IS NULL
-  THEN &apos;Center&apos;
-  ELSE b.hali_txt
- END as hali_txt,
- CASE WHEN b.vali_txt IS NULL
-  THEN &apos;Half&apos;
-  ELSE b.vali_txt
- END as vali_txt
+ END as vali,a.gem_bfs as bfsnr
 FROM av_avdpool_ch.einzelobjekte_objektname as a, av_avdpool_ch.einzelobjekte_objektnamepos as b, av_avdpool_ch.einzelobjekte_einzelobjekt as c, av_avdpool_ch.einzelobjekte_punktelement as d, av_mopublic_meta.text_type as e 
 WHERE a.gem_bfs = ? AND b.gem_bfs = ? AND c.gem_bfs = ? AND d.gem_bfs = ?
 AND b.objektnamepos_von = a.tid

@@ -92,8 +92,8 @@ wobei ein Fehler darauf zurückzuführen ist, dass das Haus durch die Gemeindegr
     <access>Native</access>
     <database>rosebud2</database>
     <port>5432</port>
-    <username>mspublic</username>
-    <password>Encrypted 2be98afc86aa7f2e4a60abe65dc9ea6d9</password>
+    <username>stefan</username>
+    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -168,10 +168,8 @@ wobei ein Fehler darauf zurückzuführen ist, dass das Haus durch die Gemeindegr
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -315,7 +313,7 @@ AND ST_Distance(eingang.lage, plz.geom_plz) = 0;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.gebaeudeadressen__hausnummerpos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.gebaeudeadressen__hausnummerpos (tid, hausnummerpos_von, typ, nummer_name, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.gebaeudeadressen__hausnummerpos (tid, hausnummerpos_von, typ, nummer_name, pos, ori, hali, vali, bfsnr)
 SELECT b.tid, a.tid as hausnummerpos_von, c.designation_d as typ, a.hausnummer as nummer_name, b.pos as pos, 
         CASE
             WHEN b.ori IS NULL THEN 100::double precision
@@ -329,19 +327,7 @@ SELECT b.tid, a.tid as hausnummerpos_von, c.designation_d as typ, a.hausnummer a
             WHEN b.vali IS NULL THEN 2
             ELSE b.vali
         END as vali,
-b.gem_bfs as bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, 
-        CASE
-            WHEN b.ori IS NULL THEN 0::double precision
-            ELSE (100::double precision - b.ori) * 0.9::double precision
-        END AS rot, 
-        CASE 
-            WHEN b.hali_txt IS NULL THEN &apos;Center&apos;
-            ELSE b.hali_txt
-        END as hali_txt,
-        CASE 
-            WHEN b.vali_txt IS NULL THEN &apos;Half&apos;
-            ELSE b.vali_txt
-        END as vali_txt
+b.gem_bfs as bfsnr
 FROM av_avdpool_ch.gebaeudeadressen_gebaeudeeingang as a, av_avdpool_ch.gebaeudeadressen_hausnummerpos as b, av_mopublic_meta.text_type as c
 WHERE a.gem_bfs = ? AND b.gem_bfs = ?
 AND b.hausnummerpos_von = a.tid
@@ -378,7 +364,7 @@ AND 0 = c.code;</sql>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.gebaeudeadressen__lokalisationsnamepos WHERE bfsnr = ?;
 
-INSERT INTO av_mopublic.gebaeudeadressen__lokalisationsnamepos (tid, lokalisationsnamepos_von, lokalisationsname, pos, ori, hali, vali, bfsnr, y, x, rot, hali_txt, vali_txt)
+INSERT INTO av_mopublic.gebaeudeadressen__lokalisationsnamepos (tid, lokalisationsnamepos_von, lokalisationsname, pos, ori, hali, vali, bfsnr)
 SELECT b.tid as tid, a.tid as lokalisationsnamepos_von, a.text as lokalisationsname, b.pos as pos, 
         CASE
             WHEN b.ori IS NULL THEN 100::double precision
@@ -392,19 +378,7 @@ SELECT b.tid as tid, a.tid as lokalisationsnamepos_von, a.text as lokalisationsn
             WHEN b.vali IS NULL THEN 2
             ELSE b.vali
         END as vali,
-a.gem_bfs as bfsnr, ST_X(b.pos) AS y, ST_Y(b.pos) AS x, 
-        CASE
-            WHEN b.ori IS NULL THEN 0::double precision
-            ELSE (100::double precision - b.ori) * 0.9::double precision
-        END AS rot, 
-        CASE 
-            WHEN b.hali_txt IS NULL THEN &apos;Center&apos;
-            ELSE b.hali_txt
-        END as hali_txt,
-        CASE 
-            WHEN b.vali_txt IS NULL THEN &apos;Half&apos;
-            ELSE b.vali_txt
-        END as vali_txt
+a.gem_bfs as bfsnr
 FROM av_avdpool_ch.gebaeudeadressen_lokalisationsname as a, av_avdpool_ch.gebaeudeadressen_lokalisationsnamepos as b
 WHERE a.gem_bfs = ? AND b.gem_bfs = ?
 AND b.lokalisationsnamepos_von = a.tid;</sql>

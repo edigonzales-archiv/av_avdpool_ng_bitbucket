@@ -11,7 +11,7 @@ CREATE TABLE av_mopublic.einzelobjekte__flaechenelement
   ogc_fid serial,
   tid varchar,
   gueltigkeit varchar,
-  typ varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14.
+  typ varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14. Nein -> Bewusst "typ".
   geometrie geometry(Polygon,21781),
   qualitaetsstandard character varying,
   gwr_egid integer,
@@ -67,11 +67,11 @@ CREATE TABLE av_mopublic.einzelobjekte__flaechenelementtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT einzelobjekte__flaechenelementtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -119,7 +119,7 @@ CREATE TABLE av_mopublic.einzelobjekte__linienelement
   ogc_fid serial,
   tid varchar,
   gueltigkeit varchar,
-  typ varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14.
+  typ varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14. Nein -> Bewusst "typ".
   geometrie geometry(Linestring,21781),
   qualitaetsstandard character varying,
   gwr_egid integer,
@@ -175,11 +175,11 @@ CREATE TABLE av_mopublic.einzelobjekte__linienelementtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT einzelobjekte__linienelementtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
@@ -227,7 +227,7 @@ CREATE TABLE av_mopublic.einzelobjekte__punktelement
   ogc_fid serial,
   tid varchar,
   gueltigkeit varchar,
-  typ varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14.
+  typ varchar, -- Ich schreibe "art" obwohl die Übersetzung "typ" ist. Nachgefragt bei V+D am 30.5.14. Nein -> Bewusst "typ".
   geometrie geometry(Point,21781),
   qualitaetsstandard character varying,
   gwr_egid integer,
@@ -283,11 +283,11 @@ CREATE TABLE av_mopublic.einzelobjekte__punktelementtext
   vali integer,
   bfsnr integer,
   ---
-  y decimal, 
-  x decimal,
-  rot decimal,
-  hali_txt varchar,
-  vali_txt varchar,
+  --y decimal, 
+  --x decimal,
+  --rot decimal,
+  --hali_txt varchar,
+  --vali_txt varchar,
   CONSTRAINT einzelobjekte__punktelementtext_pkey PRIMARY KEY (ogc_fid)
 )
 WITH (
