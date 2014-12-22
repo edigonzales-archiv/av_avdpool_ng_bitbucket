@@ -5,6 +5,22 @@ import os
 class Settings:
 
     def __init__(self, opts):
+        # export all communities
+        self.export_all = opts.all
+        
+        # path to gpkg (LV03)
+        self.gpkg_lv03_dir = "/home/stefan/tmp/gpkg_lv03/"
+        
+        # path to gpkg (LV95)
+        self.gpkg_lv95_dir = "/home/stefan/tmp/gpkg_lv95/"
+        
+        # path to spatialite (LV03)
+        self.sqlite_lv03_dir = "/home/stefan/tmp/sqlite_lv03/"
+
+        # path to spatialite (LV95)
+        self.sqlite_lv95_dir = "/home/stefan/tmp/sqlite_lv95/"
+
+        
         # path to qgis dir
         self.qgis_dir = "/home/stefan/Apps/qgis_master"
         

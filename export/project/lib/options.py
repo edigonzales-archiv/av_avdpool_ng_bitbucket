@@ -1,7 +1,6 @@
-from argparse import ArgumentParser
-
-
 # -*- coding: utf-8 -*-
+
+from argparse import ArgumentParser
 
 class Options:
 
@@ -9,7 +8,7 @@ class Options:
         self._init_parser()
 
     def _init_parser(self):
-        usage = 'bin/project'
+        usage = 'bin/export'
         self.parser = ArgumentParser(usage=usage)
         self.parser.add_argument('-x',
                                 '--example',
@@ -95,11 +94,11 @@ class Options:
                                 dest ='preprocess',
                                 help = "Don't preprocess cadastral data.")
 
-        self.parser.add_argument('--antialiasing',
+        self.parser.add_argument('--all',
                                 action = 'store_true',
                                 default = False,
-                                dest ='antialiasing',
-                                help = "Generate antialiased maps.")
+                                dest ='all',
+                                help = "Export all communities.")
 
 
     def parse(self, args=None):
