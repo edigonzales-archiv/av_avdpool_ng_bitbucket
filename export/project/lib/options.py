@@ -88,11 +88,35 @@ class Options:
                                 choices = ['11'],
                                 help = 'Number of canton. Default: 11.')
 
-        self.parser.add_argument('--preprocess',
+        self.parser.add_argument('--lv03',
+                                action = 'store_true',
+                                default = True,
+                                dest ='lv03',
+                                help = "Export data in LV03.")
+
+        self.parser.add_argument('--lv95',
                                 action = 'store_true',
                                 default = False,
-                                dest ='preprocess',
-                                help = "Don't preprocess cadastral data.")
+                                dest ='lv95',
+                                help = "Export data in LV95.")
+
+        self.parser.add_argument('--gpkg',
+                                action = 'store_true',
+                                default = False,
+                                dest ='gpkg',
+                                help = "Export GeoPackage.")
+
+        self.parser.add_argument('--spatialite',
+                                action = 'store_true',
+                                default = False,
+                                dest ='spatialite',
+                                help = "Export SpatiaLite.")
+
+        self.parser.add_argument('--shp',
+                                action = 'store_true',
+                                default = False,
+                                dest ='shp',
+                                help = "Export Shapefile.")
 
         self.parser.add_argument('--all',
                                 action = 'store_true',

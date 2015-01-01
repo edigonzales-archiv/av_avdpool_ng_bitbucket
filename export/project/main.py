@@ -7,8 +7,7 @@ import datetime
 
 from lib import Options
 from lib import Settings
-from lib import Preprocessing
-from lib import Basisplan
+from lib import GeoPackage
 
 if __name__ == '__main__':    
     # read the options and arguments from the command line / and some more settings
@@ -21,18 +20,37 @@ if __name__ == '__main__':
     logging.basicConfig(filename = my_settings.get_logfile_path(), filemode = "w", format = FORMAT, level = logging.DEBUG)
 #    logging.getLogger().addHandler(logging.StreamHandler())
 
-    # check if outdir (needed for creating the logfile) exists
-    check_dir = my_settings.target_dir
-    if not os.path.isdir(check_dir):
-        errorMessage = "Error: " + check_dir + " does not exist"
-        sys.exit(errorMessage)
-
     # log some general information
-    logging.info("Creating bpav" + str(my_settings.scale) + my_settings.colortype + " at " + str(my_settings.dpi) + " dpi")
     logging.info("Settings: " + str(my_settings.__dict__))
-    logging.info("Generating maps of canton: " + str(my_settings.canton).upper())
     starttime = datetime.datetime.now()    
     logging.info("Start time is " + str(starttime))
+    
+    if my_settings.gpkg:
+        logging.info("Start exporting GeoPackage...")
+        
+        if my_settings.lv03:
+            db_params  = my_settings.db_params_lv03
+            target_dir = my_settings.gpkg_dir_lv03
+            
+            gpkg = GeoPackage(db_params, target_dir)
+            gpkg.export_communities(my_settings.export_all)
+            
+        if my_settings.lv95:
+            db_params  = my_settings.db_params_lv95
+            target_dir = my_settings.gpkg_dir_lv95
+            
+            gpkg = GeoPackage(db_params, target_dir)
+            gpkg.export_communities(my_settings.export_all)
+        
+        logging.info("Export GeoPackage done.")
+    
+    if my_settings.spatialite:
+        logging.info("Start exporting SpatiaLite...")
+
+
+        logging.info("Export SpatiaLite done.")
+
+    sys.exit()
 
     # preprocess cadastral surveying data (e.g. generalize object names)
     if my_settings.preprocess:
