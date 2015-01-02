@@ -8,7 +8,7 @@ from osgeo import ogr
 
 from lib import ExportFormat
 
-class GeoPackage(ExportFormat):
+class SpatiaLite(ExportFormat):
 
     def __init__(self, db_params,  target_dir):
         ogr.UseExceptions() 
@@ -28,14 +28,14 @@ class GeoPackage(ExportFormat):
         
         for bfsnr in bfsnr_list:
             logging.info("BFS-Nummer: " + str(bfsnr))
-            
-            out = os.path.join(self.target_dir, str(bfsnr) + ".gpkg")
-            out_driver = ogr.GetDriverByName("GPKG")
+
+            out = os.path.join(self.target_dir, str(bfsnr) + ".sqlite")
+            out_driver = ogr.GetDriverByName("SQLite")
             
             if os.path.exists(out):
                 out_driver.DeleteDataSource(out)
 
-            out_datasource = out_driver.CreateDataSource(out)
+            out_datasource = out_driver.CreateDataSource(out, options=['SPATIALITE=yes'])
 
             for i in conn:
                 daLayer = i.GetName()

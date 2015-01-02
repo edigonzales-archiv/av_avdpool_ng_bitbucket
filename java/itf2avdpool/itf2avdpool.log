@@ -1,500 +1,504 @@
-2015-01-01 15:43:55 org.catais.avdpool.App [INFO] Start: Thu Jan 01 15:43:55 CET 2015
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbhost: localhost
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbport: 5432
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbname: rosebud2
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbschema: av_avdpool_ch
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbuser: mspublic
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbpwd: mspublic
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbadmin: stefan
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] dbadminpwd: ziegler12
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] doImport: true
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] deleteFiles:false
-2015-01-01 15:43:55 org.catais.avdpool.utils.ImportProperties [DEBUG] all: false
-2015-01-01 15:43:55 org.catais.avdpool.App [DEBUG] {importSourceDir=/home/stefan/tmp/av_so/, dbhost=localhost, cantonDirLV95=/home/stefan/tmp/so/, federationDirLV03=/home/stefan/tmp/ch/, dbpwd=mspublic, doImport=true, dbadminpwd=ziegler12, dbuser=mspublic, dbschema=av_avdpool_ch, cantonDirLV03=/home/stefan/tmp/so/, dbadmin=stefan, dbport=5432, deleteFiles=false, dbname=rosebud2, all=false, federationDirLV95=/home/stefan/tmp/ch/}
-2015-01-01 15:43:55 org.catais.avdpool.App [DEBUG] /home/stefan/tmp/av_so
-2015-01-01 15:43:55 org.catais.avdpool.App [DEBUG] 25490
-2015-01-01 15:43:55 org.catais.avdpool.App [DEBUG] /home/stefan/tmp/av_so/254900.itf
-2015-01-01 15:43:55 org.catais.avdpool.App [INFO] Start conversion...
-2015-01-01 15:43:55 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVSO24
-2015-01-01 15:43:56 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVCH24D
-2015-01-01 15:43:57 org.catais.avdpool.App [INFO] End of conversion.
-2015-01-01 15:43:57 org.catais.avdpool.App [INFO] Start data import...
-2015-01-01 15:43:58 hsqldb.db.HSQLDB4AA5F3FD5E.ENGINE [INFO] dataFileCache open start
-2015-01-01 15:43:58 hsqldb.db.HSQLDB4AA5F3FD5E.ENGINE [INFO] Checkpoint start
-2015-01-01 15:43:58 hsqldb.db.HSQLDB4AA5F3FD5E.ENGINE [INFO] Checkpoint end
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1nachfuehrung (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1 (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1pos (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1symbol (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1nachfuehrung (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1 (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1pos (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2nachfuehrung (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2 (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2pos (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2symbol (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2nachfuehrung (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2 (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2pos (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3nachfuehrung (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3 (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3pos (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3symbol (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3nachfuehrung (2549, 0)
-2015-01-01 15:43:59 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3 (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3pos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_bbnachfuehrung (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaeche (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummer (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummerpos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektname (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektnamepos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaechesymbol (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaeche (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummer (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummerpos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektname (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektnamepos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaechesymbol (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunkt (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunktpos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_eonachfuehrung (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelobjekt (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelement (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelementsymbol (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelement (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelementsymbol (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_punktelement (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektname (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnamepos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummer (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummerpos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunkt (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunktpos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_honachfuehrung (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunkt (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunktpos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_gelaendekante (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_aussparung (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_nknachfuehrung (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurname (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurnamepos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsname (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsnamepos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendename (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendenamepos (2549, 0)
-2015-01-01 15:44:00 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lsnachfuehrung (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunkt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktsymbol (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueck (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueckpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib1 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projliegenschaft (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib2 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projselbstrecht (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib3 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projbergwerk (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueck (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueckpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib4 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_liegenschaft (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib5 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_selbstrecht (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib6 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_bergwerk (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_rlnachfuehrung (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjekt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjektpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_lineattrib7 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_flaechenelement (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_linienelement (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_punktelement (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunkt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunktpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunkt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunktpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereich (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nbgeometrie (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereichpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemnachfuehrung (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunkt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktpos (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktsymbol (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeinde (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_projgemeindegrenze (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_lineattrib8 (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeindegrenze (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from bezirksgrenzen_bezirksgrenzabschnitt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from kantonsgrenzen_kantonsgrenzabschnitt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from landesgrenzen_landesgrenzabschnitt (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plan (2549, 0)
-2015-01-01 15:44:01 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plangeometrie (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_planpos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufe (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufepos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschung (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschungpos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_osnachfuehrung (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbund (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbundtext (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaft (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsname (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6nachfuehrung (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6 (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebnachfuehrung (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisation (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsname (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsnamepos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_benanntesgebiet (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_strassenstueck (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudeeingang (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_hausnummerpos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudename (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudenamepos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudebeschreibung (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayout (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftung (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftungpos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschrift (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschriftpos (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_linienobjekt (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenlinie (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_darstellungsflaeche (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayoutsymbol (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_netzkreuz (2549, 0)
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [WARN] no features in surfaceMainCollection
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2015-01-01 15:44:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2015-01-01 15:44:03 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:03 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2015-01-01 15:44:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2015-01-01 15:44:04 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:04 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Flurname
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2015-01-01 15:44:04 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NummerierungsbereichPos
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bezirksgrenzen.Bezirksgrenzabschnitt
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Kantonsgrenzen.Kantonsgrenzabschnitt
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plan
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:05 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2015-01-01 15:44:05 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.BenanntesGebiet
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.PlanLayout
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.Planbeschriftung
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.PlanbeschriftungPos
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.Linienobjekt
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.BenanntesGebiet
-2015-01-01 15:44:06 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.Darstellungsflaeche
-2015-01-01 15:44:06 org.catais.avdpool.App [INFO] End data import.
-2015-01-01 15:44:06 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Source CHENyx06 shapefile: /tmp/ili2freeframe0.6751761011845259/chenyx06lv03.shp
-2015-01-01 15:44:06 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Feature count of source CHENyx06 shapefile: 11882
-2015-01-01 15:44:06 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Destination reference frame: LV95
-2015-01-01 15:44:06 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Building SpatialIndex...
-2015-01-01 15:44:06 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] SpatialIndex is built.
-2015-01-01 15:44:07 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVCH24D
-2015-01-01 15:44:07 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVCH24LV95D
-2015-01-01 15:44:08 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVSO24
-2015-01-01 15:44:08 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVSO24LV95
-2015-01-01 15:44:08 org.catais.avdpool.App [DEBUG] 25240
-2015-01-01 15:44:08 org.catais.avdpool.App [DEBUG] /home/stefan/tmp/av_so/252400.itf
-2015-01-01 15:44:08 org.catais.avdpool.App [INFO] Start conversion...
-2015-01-01 15:44:08 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVSO24
-2015-01-01 15:44:08 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVCH24D
-2015-01-01 15:44:09 org.catais.avdpool.App [INFO] End of conversion.
-2015-01-01 15:44:09 org.catais.avdpool.App [INFO] Start data import...
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1nachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1 (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1pos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1symbol (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1nachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1 (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1pos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2nachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2 (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2pos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2symbol (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2nachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2 (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2pos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3nachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3 (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3pos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3symbol (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3nachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3 (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3pos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_bbnachfuehrung (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaeche (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummer (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummerpos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektname (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektnamepos (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaechesymbol (2524, 0)
-2015-01-01 15:44:09 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaeche (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummer (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummerpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektname (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektnamepos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaechesymbol (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunkt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunktpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_eonachfuehrung (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelobjekt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelement (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelementsymbol (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelement (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelementsymbol (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_punktelement (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektname (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnamepos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummer (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummerpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunkt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunktpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_honachfuehrung (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunkt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunktpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_gelaendekante (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_aussparung (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_nknachfuehrung (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurname (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurnamepos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsname (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsnamepos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendename (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendenamepos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lsnachfuehrung (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunkt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktsymbol (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueck (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueckpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib1 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projliegenschaft (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib2 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projselbstrecht (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib3 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projbergwerk (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueck (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueckpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib4 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_liegenschaft (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib5 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_selbstrecht (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib6 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_bergwerk (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_rlnachfuehrung (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjekt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjektpos (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_lineattrib7 (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_flaechenelement (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_linienelement (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_punktelement (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunkt (2524, 0)
-2015-01-01 15:44:10 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunktpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunkt (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunktpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereich (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nbgeometrie (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereichpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemnachfuehrung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunkt (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktsymbol (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeinde (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_projgemeindegrenze (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_lineattrib8 (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeindegrenze (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from bezirksgrenzen_bezirksgrenzabschnitt (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from kantonsgrenzen_kantonsgrenzabschnitt (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from landesgrenzen_landesgrenzabschnitt (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plan (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plangeometrie (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_planpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufe (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufepos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschungpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_osnachfuehrung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbund (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbundtext (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaft (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsname (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6nachfuehrung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6 (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebnachfuehrung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisation (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsname (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsnamepos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_benanntesgebiet (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_strassenstueck (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudeeingang (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_hausnummerpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudename (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudenamepos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudebeschreibung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayout (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftung (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftungpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschrift (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschriftpos (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_linienobjekt (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenlinie (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_darstellungsflaeche (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayoutsymbol (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_netzkreuz (2524, 0)
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [WARN] no features in surfaceMainCollection
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
-2015-01-01 15:44:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
-2015-01-01 15:44:12 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:12 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Objektname
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.ObjektnamePos
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
-2015-01-01 15:44:12 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:12 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Flurname
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
-2015-01-01 15:44:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueck
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2015-01-01 15:44:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Linienelement
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plan
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
-2015-01-01 15:44:14 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
-2015-01-01 15:44:14 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
-2015-01-01 15:44:15 org.catais.avdpool.App [INFO] End data import.
-2015-01-01 15:44:15 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVCH24D
-2015-01-01 15:44:15 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVCH24LV95D
-2015-01-01 15:44:15 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVSO24
-2015-01-01 15:44:15 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVSO24LV95
-2015-01-01 15:44:15 org.catais.avdpool.App [INFO] Start Reindexing...
-2015-01-01 15:44:15 org.catais.avdpool.App [INFO] End Reindexing.
-2015-01-01 15:44:15 org.catais.avdpool.App [INFO] Start Vacuum...
-2015-01-01 15:44:15 org.catais.avdpool.App [INFO] End Vacuum.
-2015-01-01 15:44:15 org.catais.avdpool.App [INFO] Ende: Thu Jan 01 15:44:15 CET 2015
+2015-01-02 08:04:52 org.catais.avdpool.App [INFO] Start: Fri Jan 02 08:04:52 CET 2015
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbhost: localhost
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbport: 5432
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbname: rosebud2
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbschema: av_avdpool_ch
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbuser: mspublic
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbpwd: mspublic
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbadmin: stefan
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] dbadminpwd: ziegler12
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] doImport: true
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] deleteFiles:false
+2015-01-02 08:04:52 org.catais.avdpool.utils.ImportProperties [DEBUG] all: false
+2015-01-02 08:04:52 org.catais.avdpool.App [DEBUG] {importSourceDir=/home/stefan/tmp/av_so/, dbhost=localhost, cantonDirLV95=/home/stefan/tmp/so/, federationDirLV03=/home/stefan/tmp/ch/, dbpwd=mspublic, doImport=true, dbadminpwd=ziegler12, dbuser=mspublic, dbschema=av_avdpool_ch, cantonDirLV03=/home/stefan/tmp/so/, dbadmin=stefan, dbport=5432, deleteFiles=false, dbname=rosebud2, all=false, federationDirLV95=/home/stefan/tmp/ch/}
+2015-01-02 08:04:52 org.catais.avdpool.App [DEBUG] /home/stefan/tmp/av_so
+2015-01-02 08:04:52 org.catais.avdpool.App [DEBUG] 25490
+2015-01-02 08:04:52 org.catais.avdpool.App [DEBUG] /home/stefan/tmp/av_so/254900.itf
+2015-01-02 08:04:52 org.catais.avdpool.App [INFO] Start conversion...
+2015-01-02 08:04:53 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVSO24
+2015-01-02 08:04:53 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVCH24D
+2015-01-02 08:04:54 org.catais.avdpool.App [INFO] End of conversion.
+2015-01-02 08:04:54 org.catais.avdpool.App [INFO] Start data import...
+2015-01-02 08:04:55 hsqldb.db.HSQLDB4AA976123A.ENGINE [INFO] dataFileCache open start
+2015-01-02 08:04:55 hsqldb.db.HSQLDB4AA976123A.ENGINE [INFO] Checkpoint start
+2015-01-02 08:04:55 hsqldb.db.HSQLDB4AA976123A.ENGINE [INFO] Checkpoint end
+2015-01-02 08:04:55 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1nachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1 (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1pos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1symbol (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1nachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1 (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1pos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2nachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2 (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2pos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2symbol (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2nachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2 (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2pos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3nachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3 (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3pos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3symbol (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3nachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3 (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3pos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_bbnachfuehrung (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaeche (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummer (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummerpos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektname (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektnamepos (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaechesymbol (2549, 0)
+2015-01-02 08:04:56 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaeche (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummer (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummerpos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektname (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektnamepos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaechesymbol (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunkt (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunktpos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_eonachfuehrung (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelobjekt (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelement (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelementsymbol (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelement (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelementsymbol (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_punktelement (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektname (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnamepos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummer (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummerpos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunkt (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunktpos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_honachfuehrung (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunkt (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunktpos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_gelaendekante (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_aussparung (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_nknachfuehrung (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurname (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurnamepos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsname (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsnamepos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendename (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendenamepos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lsnachfuehrung (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunkt (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktpos (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktsymbol (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueck (2549, 0)
+2015-01-02 08:04:57 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueckpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib1 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projliegenschaft (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib2 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projselbstrecht (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib3 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projbergwerk (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueck (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueckpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib4 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_liegenschaft (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib5 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_selbstrecht (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib6 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_bergwerk (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_rlnachfuehrung (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjekt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjektpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_lineattrib7 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_flaechenelement (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_linienelement (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_punktelement (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunkt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunktpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunkt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunktpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereich (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nbgeometrie (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereichpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemnachfuehrung (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunkt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktsymbol (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeinde (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_projgemeindegrenze (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_lineattrib8 (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeindegrenze (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from bezirksgrenzen_bezirksgrenzabschnitt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from kantonsgrenzen_kantonsgrenzabschnitt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from landesgrenzen_landesgrenzabschnitt (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plan (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plangeometrie (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_planpos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufe (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufepos (2549, 0)
+2015-01-02 08:04:58 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschung (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschungpos (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_osnachfuehrung (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbund (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbundtext (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaft (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsname (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6nachfuehrung (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6 (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebnachfuehrung (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisation (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsname (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsnamepos (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_benanntesgebiet (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_strassenstueck (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudeeingang (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_hausnummerpos (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudename (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudenamepos (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudebeschreibung (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayout (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftung (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftungpos (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschrift (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschriftpos (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_linienobjekt (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenlinie (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_darstellungsflaeche (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayoutsymbol (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_netzkreuz (2549, 0)
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [WARN] no features in surfaceMainCollection
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2015-01-02 08:04:59 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2015-01-02 08:05:00 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:00 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2015-01-02 08:05:00 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2015-01-02 08:05:01 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:01 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Flurname
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2015-01-02 08:05:01 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NummerierungsbereichPos
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bezirksgrenzen.Bezirksgrenzabschnitt
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Kantonsgrenzen.Kantonsgrenzabschnitt
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plan
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:02 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2015-01-02 08:05:02 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.BenanntesGebiet
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.PlanLayout
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.Planbeschriftung
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.PlanbeschriftungPos
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.Linienobjekt
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.BenanntesGebiet
+2015-01-02 08:05:03 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planrahmen.Darstellungsflaeche
+2015-01-02 08:05:03 org.catais.avdpool.App [INFO] End data import.
+2015-01-02 08:05:03 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Source CHENyx06 shapefile: /tmp/ili2freeframe0.73506390426437/chenyx06lv03.shp
+2015-01-02 08:05:03 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Feature count of source CHENyx06 shapefile: 11882
+2015-01-02 08:05:03 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Destination reference frame: LV95
+2015-01-02 08:05:03 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] Building SpatialIndex...
+2015-01-02 08:05:03 org.catais.avdpool.ili2freeframe.FreeFrame [DEBUG] SpatialIndex is built.
+2015-01-02 08:05:04 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVCH24D
+2015-01-02 08:05:04 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVCH24LV95D
+2015-01-02 08:05:05 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVSO24
+2015-01-02 08:05:05 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVSO24LV95
+2015-01-02 08:05:05 org.catais.avdpool.App [DEBUG] 25240
+2015-01-02 08:05:05 org.catais.avdpool.App [DEBUG] /home/stefan/tmp/av_so/252400.itf
+2015-01-02 08:05:05 org.catais.avdpool.App [INFO] Start conversion...
+2015-01-02 08:05:05 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVSO24
+2015-01-02 08:05:05 org.catais.avdpool.ili2ch.Ili2ch [DEBUG] DM01AVCH24D
+2015-01-02 08:05:06 org.catais.avdpool.App [INFO] End of conversion.
+2015-01-02 08:05:06 org.catais.avdpool.App [INFO] Start data import...
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1nachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1 (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1pos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_lfp1symbol (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1nachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1 (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie1_hfp1pos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2nachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2 (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2pos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_lfp2symbol (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2nachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2 (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie2_hfp2pos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3nachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3 (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3pos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_lfp3symbol (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3nachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3 (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from fixpunktekategorie3_hfp3pos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_bbnachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaeche (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummer (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projgebaeudenummerpos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektname (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projobjektnamepos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_projboflaechesymbol (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaeche (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummer (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_gebaeudenummerpos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektname (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_objektnamepos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_boflaechesymbol (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunkt (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from bodenbedeckung_einzelpunktpos (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_eonachfuehrung (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelobjekt (2524, 0)
+2015-01-02 08:05:06 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelement (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_flaechenelementsymbol (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelement (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_linienelementsymbol (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_punktelement (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektname (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnamepos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummer (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_objektnummerpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunkt (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from einzelobjekte_einzelpunktpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_honachfuehrung (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunkt (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_hoehenpunktpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_gelaendekante (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from hoehen_aussparung (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_nknachfuehrung (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurname (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_flurnamepos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsname (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_ortsnamepos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendename (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nomenklatur_gelaendenamepos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lsnachfuehrung (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunkt (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grenzpunktsymbol (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueck (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projgrundstueckpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib1 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projliegenschaft (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib2 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projselbstrecht (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib3 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_projbergwerk (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueck (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_grundstueckpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib4 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_liegenschaft (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib5 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_selbstrecht (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_lineattrib6 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from liegenschaften_bergwerk (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_rlnachfuehrung (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjekt (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_leitungsobjektpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_lineattrib7 (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_flaechenelement (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_linienelement (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_punktelement (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunkt (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_signalpunktpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunkt (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from rohrleitungen_einzelpunktpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereich (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nbgeometrie (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from nummerierungsbereiche_nummerierungsbereichpos (2524, 0)
+2015-01-02 08:05:07 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemnachfuehrung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunkt (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktpos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_hoheitsgrenzpunktsymbol (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeinde (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_projgemeindegrenze (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_lineattrib8 (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gemeindegrenzen_gemeindegrenze (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from bezirksgrenzen_bezirksgrenzabschnitt (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from kantonsgrenzen_kantonsgrenzabschnitt (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from landesgrenzen_landesgrenzabschnitt (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plan (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_plangeometrie (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planeinteilungen_planpos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufe (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from tseinteilung_toleranzstufepos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from rutschgebiete_rutschungpos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_osnachfuehrung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbund (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsverbundtext (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaft (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_ortschaftsname (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6nachfuehrung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from plzortschaft_plz6 (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebnachfuehrung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisation (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsname (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_lokalisationsnamepos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_benanntesgebiet (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_strassenstueck (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudeeingang (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_hausnummerpos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudename (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudenamepos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from gebaeudeadressen_gebaeudebeschreibung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayout (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftung (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planbeschriftungpos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschrift (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenanschriftpos (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_linienobjekt (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_koordinatenlinie (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_darstellungsflaeche (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_planlayoutsymbol (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Deleting data from planrahmen_netzkreuz (2524, 0)
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [WARN] no features in surfaceMainCollection
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Pos
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Symbol
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie2.LFP2Nachfuehrung
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Pos
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Symbol
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.FixpunkteKategorie3.LFP3Nachfuehrung
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BBNachfuehrung
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
+2015-01-02 08:05:08 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjGebaeudenummer
+2015-01-02 08:05:09 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:09 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:09 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaeche
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Gebaeudenummer
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.Objektname
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ObjektnamePos
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.BoFlaecheSymbol
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Bodenbedeckung.ProjBoFlaeche
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Einzelobjekt
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.EONachfuehrung
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.FlaechenelementSymbol
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Linienelement
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Objektname
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.ObjektnamePos
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Einzelobjekte.Flaechenelement
+2015-01-02 08:05:10 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:10 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Flurname
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.FlurnamePos
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.NKNachfuehrung
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.OrtsnamePos
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nomenklatur.Ortsname
+2015-01-02 08:05:10 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grenzpunkt
+2015-01-02 08:05:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2015-01-02 08:05:11 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrenzpunktSymbol
+2015-01-02 08:05:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueck
+2015-01-02 08:05:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjGrundstueckPos
+2015-01-02 08:05:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.LSNachfuehrung
+2015-01-02 08:05:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2015-01-02 08:05:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Grundstueck
+2015-01-02 08:05:12 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.GrundstueckPos
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.Liegenschaft
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Liegenschaften.ProjLiegenschaft
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Leitungsobjekt
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.LeitungsobjektPos
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.Linienelement
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.Nummerierungsbereich
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Rohrleitungen.RLNachfuehrung
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Nummerierungsbereiche.NBGeometrie
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Hoheitsgrenzpunkt
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktPos
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.HoheitsgrenzpunktSymbol
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeinde
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.Gemeindegrenze
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plan
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.Plangeometrie
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Planeinteilungen.PlanPos
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] Anzahl Löcher: 
+2015-01-02 08:05:13 org.catais.avdpool.utils.SurfaceAreaBuilder [DEBUG] 0
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.TSEinteilung.Toleranzstufe
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gemeindegrenzen.GEMNachfuehrung
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Lokalisation
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.GEBNachfuehrung
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsName
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.LokalisationsNamePos
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Strassenstueck
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.Gebaeudeeingang
+2015-01-02 08:05:13 org.catais.avdpool.IliReader [INFO] Add features: DM01AVCH24D.Gebaeudeadressen.HausnummerPos
+2015-01-02 08:05:13 org.catais.avdpool.App [INFO] End data import.
+2015-01-02 08:05:13 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVCH24D
+2015-01-02 08:05:13 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVCH24LV95D
+2015-01-02 08:05:14 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] InputModelName: DM01AVSO24
+2015-01-02 08:05:14 org.catais.avdpool.ili2freeframe.Ili2FreeFrame [INFO] OutputModelName: DM01AVSO24LV95
+2015-01-02 08:05:14 org.catais.avdpool.App [INFO] Start Reindexing...
+2015-01-02 08:05:14 org.catais.avdpool.utils.Reindex [INFO] Reindexing tables from: av_avdpool_ch
+2015-01-02 08:06:35 org.catais.avdpool.utils.Reindex [INFO] Reindexing finished.
+2015-01-02 08:06:35 org.catais.avdpool.App [INFO] End Reindexing.
+2015-01-02 08:06:35 org.catais.avdpool.App [INFO] Start Vacuum...
+2015-01-02 08:06:35 org.catais.avdpool.utils.Vacuum [INFO] Vacuumizing tables from: av_avdpool_ch
+2015-01-02 08:07:03 org.catais.avdpool.utils.Vacuum [INFO] Vacuumizing finished.
+2015-01-02 08:07:03 org.catais.avdpool.App [INFO] End Vacuum.
+2015-01-02 08:07:03 org.catais.avdpool.App [INFO] Ende: Fri Jan 02 08:07:03 CET 2015
