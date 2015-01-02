@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>trans_vacuum_mopublic</name>
+    <name>trans_reindex_avwms</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -18,7 +18,7 @@
       <connection/>
       <table/>
       <step_performance_table/>
-      <use_batchid>N</use_batchid>
+      <use_batchid>Y</use_batchid>
       <use_logfield>N</use_logfield>
       <size_limit_lines/>
     </log>
@@ -48,34 +48,12 @@
     <clusterschemas>
     </clusterschemas>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;05&#47;31 18:44:19.001</modified_date>
+  <modified_date>2015&#47;01&#47;02 19:37:00.186</modified_date>
   </info>
   <notepads>
   </notepads>
   <connection>
     <name>rosebud2</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>rosebud2</database>
-    <port>5432</port>
-    <username>stefan</username>
-    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>srsofaioi4531</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
@@ -162,32 +140,10 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
-  <connection>
-    <name>xanadu2_test</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>xanadu2_test</database>
-    <port>5432</port>
-    <username>stefan</username>
-    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
   <order>
-  <hop> <from>Alle Tabellen des *av_mopublic* Schemas</from><to>Vacuum MOpublic tables</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Alle Tabellen des *av_avwms* Schemas</from><to>Reindex</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>Alle Tabellen des *av_mopublic* Schemas</name>
+    <name>Alle Tabellen des *av_avwms* Schemas</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -198,7 +154,7 @@
            </partitioning>
     <connection>rosebud2</connection>
     <sql>SELECT table_schema, table_name FROM information_schema.tables 
-WHERE table_schema = &apos;av_mopublic&apos;
+WHERE table_schema = &apos;av_avwms&apos;
 AND table_type &lt;&gt; &apos;VIEW&apos;</sql>
     <limit>0</limit>
     <lookup/>
@@ -207,14 +163,14 @@ AND table_type &lt;&gt; &apos;VIEW&apos;</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>157</xloc>
-      <yloc>106</yloc>
+      <xloc>238</xloc>
+      <yloc>262</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Vacuum MOpublic tables</name>
+    <name>Reindex</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -229,7 +185,7 @@ AND table_type &lt;&gt; &apos;VIEW&apos;</sql>
     <sql>SET work_mem TO &apos;1GB&apos;;
 SET maintenance_work_mem TO &apos;512MB&apos;;
 
-VACUUM ANALYZE ?.?;
+REINDEX TABLE ?.?;
 
 SET work_mem TO &apos;1MB&apos;;
 SET maintenance_work_mem TO &apos;16MB&apos;;</sql>
@@ -243,8 +199,8 @@ SET maintenance_work_mem TO &apos;16MB&apos;;</sql>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>441</xloc>
-      <yloc>104</yloc>
+      <xloc>530</xloc>
+      <yloc>268</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

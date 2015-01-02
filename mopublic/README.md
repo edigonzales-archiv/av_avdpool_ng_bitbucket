@@ -17,7 +17,6 @@ Search and replace mit find und sed:
 ```
 find . -iname "*.ktr" -type f -exec sed -i 's/<connection>xanadu2<\/connection>/<connection>rosebud2<\/connection>/g' {} \;
 find . -iname "*.ktr" -type f -exec sed -i 's/<connection>strelnikow<\/connection>/<connection>xanadu<\/connection>/g' {} \;
-
 ```
 
 `rosebud2` war ursprünglich eine ro-Connection ("mspublic"). Es scheint aber zu funktionieren, wenn man die Shared-Connection zu einr rw-Connection ("stefan") macht. Obwohl in den *.ktr-Dateien immer noch `mspublic` steht.

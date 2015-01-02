@@ -1,40 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>job_vacuum_mopublic</name>
+  <name>job_update_avwms</name>
     <description/>
     <extended_description/>
     <job_version/>
   <directory>&#47;</directory>
   <created_user>-</created_user>
-  <created_date>2014&#47;05&#47;31 18:48:55.773</created_date>
+  <created_date>2015&#47;01&#47;02 19:42:04.284</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;05&#47;31 18:48:55.773</modified_date>
+  <modified_date>2015&#47;01&#47;02 19:42:04.284</modified_date>
     <parameters>
     </parameters>
   <connection>
     <name>rosebud2</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>rosebud2</database>
-    <port>5432</port>
-    <username>stefan</username>
-    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>srsofaioi4531</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
@@ -121,41 +99,19 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
-  <connection>
-    <name>xanadu2_test</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>xanadu2_test</database>
-    <port>5432</port>
-    <username>stefan</username>
-    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
     <slaveservers>
     </slaveservers>
   <logconnection/>
   <logtable/>
   <size_limit_lines/>
-   <use_batchid>N</use_batchid>
+   <use_batchid>Y</use_batchid>
    <pass_batchid>N</pass_batchid>
-   <use_logfield>N</use_logfield>
+   <use_logfield>Y</use_logfield>
    <shared_objects_file/>
   <entries>
     <entry>
       <name>START</name>
-      <description/>
+      <description>Special entries</description>
       <type>SPECIAL</type>
       <start>Y</start>
       <dummy>N</dummy>
@@ -170,25 +126,26 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>74</xloc>
-      <yloc>118</yloc>
+      <xloc>271</xloc>
+      <yloc>286</yloc>
       </entry>
     <entry>
-      <name>Success</name>
-      <description/>
+      <name>Success 1</name>
+      <description>Success</description>
       <type>SUCCESS</type>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>505</xloc>
-      <yloc>115</yloc>
+      <xloc>1096</xloc>
+      <yloc>295</yloc>
       </entry>
     <entry>
-      <name>Vacuum MOpublic</name>
-      <description/>
+      <name>trans_update_avwms</name>
+      <description>Transformation</description>
       <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;trans_vacuum_mopublic.ktr</filename>
+      <filename>file:&#47;&#47;&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ng&#47;avwms&#47;kettle&#47;lv03&#47;trans_update_avwms.ktr</filename>
       <transname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
@@ -198,7 +155,7 @@
       <logext/>
       <add_date>N</add_date>
       <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
+      <loglevel>Nothing</loglevel>
       <cluster>N</cluster>
       <slave_server_name/>
       <set_append_logfile>N</set_append_logfile>
@@ -208,14 +165,72 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>290</xloc>
-      <yloc>116</yloc>
+      <xloc>482</xloc>
+      <yloc>286</yloc>
+      </entry>
+    <entry>
+      <name>trans_reindex_avwms</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>file:&#47;&#47;&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ng&#47;avwms&#47;kettle&#47;lv03&#47;trans_reindex_avwms.ktr</filename>
+      <transname/>
+      <directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>687</xloc>
+      <yloc>287</yloc>
+      </entry>
+    <entry>
+      <name>trans_vacuum_avwms</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>file:&#47;&#47;&#47;home&#47;stefan&#47;Projekte&#47;av_avdpool_ng&#47;avwms&#47;kettle&#47;lv03&#47;trans_vacuum_avwms.ktr</filename>
+      <transname/>
+      <directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>912</xloc>
+      <yloc>287</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>Vacuum MOpublic</to>
+      <to>trans_update_avwms</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -223,8 +238,26 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Vacuum MOpublic</from>
-      <to>Success</to>
+      <from>trans_update_avwms</from>
+      <to>trans_reindex_avwms</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>trans_reindex_avwms</from>
+      <to>trans_vacuum_avwms</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>trans_vacuum_avwms</from>
+      <to>Success 1</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -233,12 +266,5 @@
     </hop>
   </hops>
   <notepads>
-    <notepad>
-      <note>LV95</note>
-      <xloc>42</xloc>
-      <yloc>28</yloc>
-      <width>36</width>
-      <heigth>23</heigth>
-    </notepad>
   </notepads>
 </job>

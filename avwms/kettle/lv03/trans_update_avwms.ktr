@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>trans_vacuum_mopublic</name>
+    <name>trans_update_avwms</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -18,7 +18,7 @@
       <connection/>
       <table/>
       <step_performance_table/>
-      <use_batchid>N</use_batchid>
+      <use_batchid>Y</use_batchid>
       <use_logfield>N</use_logfield>
       <size_limit_lines/>
     </log>
@@ -48,34 +48,12 @@
     <clusterschemas>
     </clusterschemas>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;05&#47;31 18:44:19.001</modified_date>
+  <modified_date>2015&#47;01&#47;02 19:08:24.402</modified_date>
   </info>
   <notepads>
   </notepads>
   <connection>
     <name>rosebud2</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>rosebud2</database>
-    <port>5432</port>
-    <username>stefan</username>
-    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>srsofaioi4531</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
@@ -162,32 +140,10 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
-  <connection>
-    <name>xanadu2_test</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>xanadu2_test</database>
-    <port>5432</port>
-    <username>stefan</username>
-    <password>Encrypted 2be98afc86aa7f29ea21ca97cdb80fe88</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
   <order>
-  <hop> <from>Alle Tabellen des *av_mopublic* Schemas</from><to>Vacuum MOpublic tables</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get deliveries</from><to>av_avwms.osnr</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_avwms.osnrproj</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_avwms.soobj</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>Alle Tabellen des *av_mopublic* Schemas</name>
+    <name>Get deliveries</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -197,9 +153,11 @@
            <schema_name/>
            </partitioning>
     <connection>rosebud2</connection>
-    <sql>SELECT table_schema, table_name FROM information_schema.tables 
-WHERE table_schema = &apos;av_mopublic&apos;
-AND table_type &lt;&gt; &apos;VIEW&apos;</sql>
+    <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
+FROM av_avdpool_ch.gemeindegrenzen_gemeinde
+--WHERE gem_bfs = 2427
+WHERE lieferdatum = current_date
+--Limit 1</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -207,14 +165,14 @@ AND table_type &lt;&gt; &apos;VIEW&apos;</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>157</xloc>
-      <yloc>106</yloc>
+      <xloc>466</xloc>
+      <yloc>50</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Vacuum MOpublic tables</name>
+    <name>av_avwms.osnr</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -226,25 +184,122 @@ AND table_type &lt;&gt; &apos;VIEW&apos;</sql>
     <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
-    <sql>SET work_mem TO &apos;1GB&apos;;
-SET maintenance_work_mem TO &apos;512MB&apos;;
+    <sql>DELETE FROM av_avwms.osnr WHERE bfsnr = ?;
 
-VACUUM ANALYZE ?.?;
+INSERT INTO av_avwms.osnr(nbident, nummer, pos, ori, hali, vali, bfsnr, art)
 
-SET work_mem TO &apos;1MB&apos;;
-SET maintenance_work_mem TO &apos;16MB&apos;;</sql>
+SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, art 
+FROM
+(
+  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 1 as art FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos
+  WHERE bfsnr = ?
+  UNION
+  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 0 as art FROM av_mopublic.liegenschaften__liegenschaftpos
+  WHERE bfsnr = ?
+) as a;
+</sql>
     <insert_field/>
     <update_field/>
     <delete_field/>
     <read_field/>
     <arguments>
-       <argument><name>table_schema</name></argument>
-       <argument><name>table_name</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>441</xloc>
-      <yloc>104</yloc>
+      <xloc>184</xloc>
+      <yloc>289</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>av_avwms.osnrproj</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>rosebud2</connection>
+    <execute_each_row>Y</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_avwms.osnrproj WHERE bfsnr = ?;
+
+INSERT INTO av_avwms.osnrproj (nbident, nummer, pos, ori, hali, vali, bfsnr, art)
+SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, art 
+FROM
+(
+  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 1 as art FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
+  WHERE bfsnr = ?
+  UNION
+  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 0 as art FROM av_mopublic.liegenschaften__projliegenschaftpos 
+  WHERE bfsnr = ?
+) as a;</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>506</xloc>
+      <yloc>292</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>av_avwms.soobj</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>rosebud2</connection>
+    <execute_each_row>Y</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_avwms.soobj WHERE bfsnr = ?;
+
+INSERT INTO av_avwms.soobj (typ, nummer_name, pos, ori, hali, vali, bfsnr)
+SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr
+FROM
+(
+ SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__flaechenelementtext
+ WHERE bfsnr = ?
+ UNION
+ SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__linienelementtext
+ WHERE bfsnr = ?
+ UNION
+ SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__punktelementtext 
+ WHERE bfsnr = ? 
+) as a;
+</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>798</xloc>
+      <yloc>268</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
