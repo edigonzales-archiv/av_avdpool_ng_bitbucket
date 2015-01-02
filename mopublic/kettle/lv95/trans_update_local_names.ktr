@@ -175,7 +175,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.nomenklatur__namen WHERE bfsnr IN ${GEM_BFS};
@@ -204,7 +204,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.nomenklatur__namenpos WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -311,7 +311,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>nomenklatur__namen</table>
     <commit>1000</commit>
@@ -413,7 +413,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>nomenklatur__namenpos</table>
     <commit>1000</commit>

@@ -175,7 +175,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__grenzpunkt WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -203,7 +203,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaft WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -231,7 +231,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__liegenschaftpos WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -259,7 +259,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaft WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -287,7 +287,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projliegenschaftpos WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -315,7 +315,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerk WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -343,7 +343,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -371,7 +371,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerk WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -399,7 +399,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <execute_each_row>N</execute_each_row>
     <replace_variables>Y</replace_variables>
     <sql>DELETE FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos WHERE bfsnr IN ${GEM_BFS};</sql>
@@ -661,7 +661,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__grenzpunkt</table>
     <commit>1000</commit>
@@ -767,7 +767,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__liegenschaft</table>
     <commit>1000</commit>
@@ -877,7 +877,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__liegenschaftpos</table>
     <commit>1000</commit>
@@ -988,7 +988,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__projselbstrecht_bergwerk</table>
     <commit>1000</commit>
@@ -1102,7 +1102,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__projselbstrecht_bergwerkpos</table>
     <commit>1000</commit>
@@ -1212,7 +1212,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__projliegenschaft</table>
     <commit>1000</commit>
@@ -1322,7 +1322,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__projliegenschaftpos</table>
     <commit>1000</commit>
@@ -1433,7 +1433,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__selbstrecht_bergwerkpos</table>
     <commit>1000</commit>
@@ -1506,7 +1506,7 @@ WHERE bfsnr IN ${GEM_BFS};</sql>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>strelnikow</connection>
+    <connection>xanadu</connection>
     <schema>av_mopublic</schema>
     <table>liegenschaften__selbstrecht_bergwerk</table>
     <commit>1000</commit>

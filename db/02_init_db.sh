@@ -1,12 +1,12 @@
 #!/bin/bash
 
 ADMIN="stefan"
-ADMINPWD="malice"
+ADMINPWD="ziegler12"
 USER="mspublic"
 USERPWD="mspublic"
 
 #DB_NAME="rosebud2"
-DB_NAME="strelnikow"
+DB_NAME="xanadu"
 PG_VERSION="9.3"
 
 echo "Delete database: $DB_NAME"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DB_NAME="strelnikow"
+DB_NAME="xanadu"
 
 sudo -u postgres psql -d $DB_NAME -f lv95/01_create_schema.sql
 sudo -u postgres psql -d $DB_NAME -f lv95/02_create_metadaten.sql
