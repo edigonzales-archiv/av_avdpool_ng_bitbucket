@@ -146,7 +146,7 @@
     <name>Get deliveries</name>
     <type>TableInput</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -156,7 +156,8 @@
     <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
 FROM av_avdpool_ch.gemeindegrenzen_gemeinde
 --WHERE gem_bfs = 2427
-WHERE lieferdatum = current_date
+WHERE lieferdatum = current_date - interval &apos;1 day&apos;
+--WHERE lieferdatum = current_date
 --Limit 1</sql>
     <limit>0</limit>
     <lookup/>
