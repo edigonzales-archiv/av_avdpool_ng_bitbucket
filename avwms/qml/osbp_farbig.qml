@@ -84,15 +84,15 @@
           <prop k="horizontal_anchor_point" v="1"/>
           <prop k="name" v="grundbuchplan/symbol_F_grenzpunkt_bolzen.svg"/>
           <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="6.66667e-05,0.001"/>
+          <prop k="offset_map_unit_scale" v="0.000666667,0.001"/>
           <prop k="offset_unit" v="MapUnit"/>
           <prop k="outline_color" v="#000000"/>
           <prop k="outline_width" v="1"/>
-          <prop k="outline_width_map_unit_scale" v="6.66667e-05,0.001"/>
+          <prop k="outline_width_map_unit_scale" v="0.000666667,0.001"/>
           <prop k="outline_width_unit" v="MapUnit"/>
           <prop k="scale_method" v="area"/>
           <prop k="size" v="4.5"/>
-          <prop k="size_map_unit_scale" v="6.66667e-05,0.001"/>
+          <prop k="size_map_unit_scale" v="0.000666667,0.001"/>
           <prop k="size_unit" v="MapUnit"/>
           <prop k="vertical_anchor_point" v="1"/>
         </layer>
