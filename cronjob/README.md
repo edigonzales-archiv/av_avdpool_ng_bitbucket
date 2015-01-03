@@ -4,4 +4,6 @@
 
 x. Tabellen für Plan für das Grundbuchplan ("zukünftige" Sicht) / GeoKettle
 
+x. Mapcache?
+
 x. Export MOpublic GPKG, SpatiaLite und Shapefiles / Python
