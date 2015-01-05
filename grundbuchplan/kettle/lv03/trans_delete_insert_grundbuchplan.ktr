@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>trans_update_avwms</name>
+    <name>trans_delete_insert_grundbuchplan</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -48,7 +48,7 @@
     <clusterschemas>
     </clusterschemas>
   <modified_user>-</modified_user>
-  <modified_date>2015&#47;01&#47;02 19:08:24.402</modified_date>
+  <modified_date>2015&#47;01&#47;05 20:11:22.999</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -141,7 +141,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get deliveries</from><to>av_avwms.osnr</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_avwms.osnrproj</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_avwms.soobj</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get deliveries</from><to>grundbuchplan.t_liegenschaften_liegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_grundbuchplan.t_liegenschaften_projliegenschaft</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_grundbuchplan.t_liegenschaften_selbstrecht</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>t_liegenschaften_projselbstrecht</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Get deliveries</name>
     <type>TableInput</type>
@@ -156,8 +156,8 @@
     <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
 FROM av_avdpool_ch.gemeindegrenzen_gemeinde
 --WHERE gem_bfs = 2427
---WHERE lieferdatum = current_date - interval &apos;1 day&apos;
 WHERE lieferdatum = current_date
+--WHERE lieferdatum = current_date
 --Limit 1</sql>
     <limit>0</limit>
     <lookup/>
@@ -166,14 +166,14 @@ WHERE lieferdatum = current_date
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>466</xloc>
-      <yloc>50</yloc>
+      <xloc>524</xloc>
+      <yloc>56</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>av_avwms.osnr</name>
+    <name>grundbuchplan.t_liegenschaften_liegenschaft</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -185,108 +185,29 @@ WHERE lieferdatum = current_date
     <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_avwms.osnr WHERE bfsnr = ?;
+    <sql>DELETE FROM av_grundbuchplan.t_liegenschaften_liegenschaft WHERE gem_bfs = ?;
 
-INSERT INTO av_avwms.osnr(nbident, nummer, pos, ori, hali, vali, bfsnr, art)
-
-SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, art 
-FROM
-(
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 1 as art FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos
-  WHERE bfsnr = ?
-  UNION
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 0 as art FROM av_mopublic.liegenschaften__liegenschaftpos
-  WHERE bfsnr = ?
-) as a;
-</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>184</xloc>
-      <yloc>289</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>av_avwms.osnrproj</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>rosebud2</connection>
-    <execute_each_row>Y</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_avwms.osnrproj WHERE bfsnr = ?;
-
-INSERT INTO av_avwms.osnrproj (nbident, nummer, pos, ori, hali, vali, bfsnr, art)
-SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, art 
-FROM
-(
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 1 as art FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
-  WHERE bfsnr = ?
-  UNION
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 0 as art FROM av_mopublic.liegenschaften__projliegenschaftpos 
-  WHERE bfsnr = ?
-) as a;</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>506</xloc>
-      <yloc>292</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>av_avwms.soobj</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>rosebud2</connection>
-    <execute_each_row>Y</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_avwms.soobj WHERE bfsnr = ?;
-
-INSERT INTO av_avwms.soobj (typ, nummer_name, pos, ori, hali, vali, bfsnr)
-SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr
-FROM
-(
- SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__flaechenelementtext
- WHERE bfsnr = ?
- UNION
- SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__linienelementtext
- WHERE bfsnr = ?
- UNION
- SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__punktelementtext 
- WHERE bfsnr = ? 
-) as a;
-</sql>
+INSERT INTO av_grundbuchplan.t_liegenschaften_liegenschaft (tid, liegenschaft_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum, numpos, nummer)
+SELECT c.tid, c.liegenschaft_von, c.nummerteilgrundstueck, c.geometrie, c.flaechenmass, c.gem_bfs, c.los, c.lieferdatum, c.numpos, d.nummer
+FROM 
+( 
+ SELECT a.ogc_fid, a.tid, a.liegenschaft_von, a.nummerteilgrundstueck, a.geometrie, a.flaechenmass, a.gem_bfs, a.los, a.lieferdatum, b.numpos
+ FROM 
+ ( 
+  SELECT ogc_fid, tid, liegenschaft_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum
+  FROM av_avdpool_ch.liegenschaften_liegenschaft 
+  WHERE gem_bfs = ?
+ ) a, 
+ ( 
+  SELECT grundstueckpos_von, ST_AsText(ST_Union(ST_Multi(pos))) AS numpos
+  FROM av_avdpool_ch.liegenschaften_grundstueckpos WHERE gem_bfs = ?
+  GROUP BY grundstueckpos_von
+ ) b
+ WHERE a.liegenschaft_von::text = b.grundstueckpos_von::text
+) c, 
+av_avdpool_ch.liegenschaften_grundstueck d
+WHERE d.gem_bfs = ?
+AND d.tid::text = c.liegenschaft_von::text;</sql>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -299,8 +220,170 @@ FROM
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>798</xloc>
-      <yloc>268</yloc>
+      <xloc>153</xloc>
+      <yloc>354</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>av_grundbuchplan.t_liegenschaften_projliegenschaft</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>rosebud2</connection>
+    <execute_each_row>Y</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_grundbuchplan.t_liegenschaften_projliegenschaft WHERE gem_bfs = ?;
+
+INSERT INTO av_grundbuchplan.t_liegenschaften_projliegenschaft (tid, projliegenschaft_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum, numpos, nummer)
+SELECT c.tid, c.projliegenschaft_von, c.nummerteilgrundstueck, c.geometrie, c.flaechenmass, c.gem_bfs, c.los, c.lieferdatum, c.numpos, d.nummer
+FROM 
+( 
+ SELECT a.ogc_fid, a.tid, a.projliegenschaft_von, a.nummerteilgrundstueck, a.geometrie, a.flaechenmass, a.gem_bfs, a.los, a.lieferdatum, b.numpos
+ FROM 
+ ( 
+  SELECT ogc_fid, tid, projliegenschaft_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum
+  FROM av_avdpool_ch.liegenschaften_projliegenschaft 
+  WHERE gem_bfs = ?
+ ) a, 
+ ( 
+  SELECT projgrundstueckpos_von, ST_AsText(ST_Union(ST_Multi(pos))) AS numpos
+  FROM av_avdpool_ch.liegenschaften_projgrundstueckpos WHERE gem_bfs = ?
+  GROUP BY projgrundstueckpos_von
+ ) b
+ WHERE a.projliegenschaft_von::text = b.projgrundstueckpos_von::text
+) c, 
+av_avdpool_ch.liegenschaften_projgrundstueck d
+WHERE d.gem_bfs = ?
+AND d.tid::text = c.projliegenschaft_von::text;</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>391</xloc>
+      <yloc>295</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>av_grundbuchplan.t_liegenschaften_selbstrecht</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>rosebud2</connection>
+    <execute_each_row>Y</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_grundbuchplan.t_liegenschaften_selbstrecht WHERE gem_bfs = ?;
+
+INSERT INTO av_grundbuchplan.t_liegenschaften_selbstrecht (tid, selbstrecht_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum, numpos, nummer)
+SELECT c.tid, c.selbstrecht_von, c.nummerteilgrundstueck, c.geometrie, c.flaechenmass, c.gem_bfs, c.los, c.lieferdatum, c.numpos, d.nummer
+FROM 
+( 
+ SELECT a.ogc_fid, a.tid, a.selbstrecht_von, a.nummerteilgrundstueck, a.geometrie, a.flaechenmass, a.gem_bfs, a.los, a.lieferdatum, b.numpos
+ FROM 
+ ( 
+  SELECT ogc_fid, tid, selbstrecht_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum
+  FROM av_avdpool_ch.liegenschaften_selbstrecht 
+  WHERE gem_bfs = ?
+ ) a, 
+ ( 
+  SELECT grundstueckpos_von, ST_AsText(ST_Union(ST_Multi(pos))) AS numpos
+  FROM av_avdpool_ch.liegenschaften_grundstueckpos WHERE gem_bfs = ?
+  GROUP BY grundstueckpos_von
+ ) b
+ WHERE a.selbstrecht_von::text = b.grundstueckpos_von::text
+) c, 
+av_avdpool_ch.liegenschaften_grundstueck d
+WHERE d.gem_bfs = ?
+AND d.tid::text = c.selbstrecht_von::text;</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>619</xloc>
+      <yloc>361</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_liegenschaften_projselbstrecht</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>rosebud2</connection>
+    <execute_each_row>Y</execute_each_row>
+    <replace_variables>Y</replace_variables>
+    <sql>DELETE FROM av_grundbuchplan.t_liegenschaften_projselbstrecht WHERE gem_bfs = ?;
+
+INSERT INTO av_grundbuchplan.t_liegenschaften_projselbstrecht (tid, projselbstrecht_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum, numpos, nummer)
+SELECT c.tid, c.projselbstrecht_von, c.nummerteilgrundstueck, c.geometrie, c.flaechenmass, c.gem_bfs, c.los, c.lieferdatum, c.numpos, d.nummer
+FROM 
+( 
+ SELECT a.ogc_fid, a.tid, a.projselbstrecht_von, a.nummerteilgrundstueck, a.geometrie, a.flaechenmass, a.gem_bfs, a.los, a.lieferdatum, b.numpos
+ FROM 
+ ( 
+  SELECT ogc_fid, tid, projselbstrecht_von, nummerteilgrundstueck, geometrie, flaechenmass, gem_bfs, los, lieferdatum
+  FROM av_avdpool_ch.liegenschaften_projselbstrecht 
+  WHERE gem_bfs = ?
+ ) a, 
+ ( 
+  SELECT projgrundstueckpos_von, ST_AsText(ST_Union(ST_Multi(pos))) AS numpos
+  FROM av_avdpool_ch.liegenschaften_projgrundstueckpos WHERE gem_bfs = ?
+  GROUP BY projgrundstueckpos_von
+ ) b
+ WHERE a.projselbstrecht_von::text = b.projgrundstueckpos_von::text
+) c, 
+av_avdpool_ch.liegenschaften_projgrundstueck d
+WHERE d.gem_bfs = ?
+AND d.tid::text = c.projselbstrecht_von::text;</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+       <argument><name>gem_bfs</name></argument>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>796</xloc>
+      <yloc>308</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

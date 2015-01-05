@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>trans_update_avwms</name>
+    <name>trans_update_liegenschaft_mutation_grundbuchplan</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -48,7 +48,7 @@
     <clusterschemas>
     </clusterschemas>
   <modified_user>-</modified_user>
-  <modified_date>2015&#47;01&#47;02 19:08:24.402</modified_date>
+  <modified_date>2015&#47;01&#47;05 20:51:32.087</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -141,7 +141,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get deliveries</from><to>av_avwms.osnr</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_avwms.osnrproj</to><enabled>Y</enabled> </hop>  <hop> <from>Get deliveries</from><to>av_avwms.soobj</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get deliveries</from><to>update t_liegenschaften_liegenschaft.mutation = true</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Get deliveries</name>
     <type>TableInput</type>
@@ -156,8 +156,8 @@
     <sql>SELECT DISTINCT ON (gem_bfs) gem_bfs
 FROM av_avdpool_ch.gemeindegrenzen_gemeinde
 --WHERE gem_bfs = 2427
---WHERE lieferdatum = current_date - interval &apos;1 day&apos;
 WHERE lieferdatum = current_date
+--WHERE lieferdatum = current_date
 --Limit 1</sql>
     <limit>0</limit>
     <lookup/>
@@ -166,14 +166,14 @@ WHERE lieferdatum = current_date
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>466</xloc>
-      <yloc>50</yloc>
+      <xloc>482</xloc>
+      <yloc>82</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>av_avwms.osnr</name>
+    <name>update t_liegenschaften_liegenschaft.mutation = true</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -185,20 +185,17 @@ WHERE lieferdatum = current_date
     <connection>rosebud2</connection>
     <execute_each_row>Y</execute_each_row>
     <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_avwms.osnr WHERE bfsnr = ?;
-
-INSERT INTO av_avwms.osnr(nbident, nummer, pos, ori, hali, vali, bfsnr, art)
-
-SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, art 
-FROM
+    <sql>UPDATE av_grundbuch.t_liegenschaften_liegenschaft
+SET mutation = TRUE
+WHERE tid IN 
 (
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 1 as art FROM av_mopublic.liegenschaften__selbstrecht_bergwerkpos
-  WHERE bfsnr = ?
-  UNION
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 0 as art FROM av_mopublic.liegenschaften__liegenschaftpos
-  WHERE bfsnr = ?
-) as a;
-</sql>
+ SELECT liegen.tid
+ FROM av_avdpool_ch.liegenschaften_liegenschaft as liegen, av_avdpool_ch.liegenschaften_projliegenschaft as proj
+ WHERE liegen.gem_bfs = ?
+ AND proj.gem_bfs = ?
+ AND liegen.geometrie &amp;&amp; proj.geometrie
+ AND ST_Distance(ST_PointOnSurface(liegen.geometrie), proj.geometrie) = 0
+);</sql>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -206,101 +203,11 @@ FROM
     <arguments>
        <argument><name>gem_bfs</name></argument>
        <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>184</xloc>
-      <yloc>289</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>av_avwms.osnrproj</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>rosebud2</connection>
-    <execute_each_row>Y</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_avwms.osnrproj WHERE bfsnr = ?;
-
-INSERT INTO av_avwms.osnrproj (nbident, nummer, pos, ori, hali, vali, bfsnr, art)
-SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, art 
-FROM
-(
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 1 as art FROM av_mopublic.liegenschaften__projselbstrecht_bergwerkpos
-  WHERE bfsnr = ?
-  UNION
-  SELECT nbident, nummer, pos, ori, hali, vali, bfsnr, 0 as art FROM av_mopublic.liegenschaften__projliegenschaftpos 
-  WHERE bfsnr = ?
-) as a;</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>506</xloc>
-      <yloc>292</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>av_avwms.soobj</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>rosebud2</connection>
-    <execute_each_row>Y</execute_each_row>
-    <replace_variables>Y</replace_variables>
-    <sql>DELETE FROM av_avwms.soobj WHERE bfsnr = ?;
-
-INSERT INTO av_avwms.soobj (typ, nummer_name, pos, ori, hali, vali, bfsnr)
-SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr
-FROM
-(
- SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__flaechenelementtext
- WHERE bfsnr = ?
- UNION
- SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__linienelementtext
- WHERE bfsnr = ?
- UNION
- SELECT typ, nummer_name, pos, ori, hali, vali, bfsnr FROM av_mopublic.einzelobjekte__punktelementtext 
- WHERE bfsnr = ? 
-) as a;
-</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-       <argument><name>gem_bfs</name></argument>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>798</xloc>
-      <yloc>268</yloc>
+      <xloc>485</xloc>
+      <yloc>318</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
