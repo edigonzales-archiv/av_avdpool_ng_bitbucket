@@ -126,8 +126,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>86</xloc>
-      <yloc>37</yloc>
+      <xloc>77</xloc>
+      <yloc>120</yloc>
       </entry>
     <entry>
       <name>Success 1</name>
@@ -136,8 +136,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1487</xloc>
-      <yloc>244</yloc>
+      <xloc>1478</xloc>
+      <yloc>327</yloc>
       </entry>
     <entry>
       <name>trans_delete_insert_part_1_grundbuchplan</name>
@@ -165,8 +165,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>209</xloc>
-      <yloc>246</yloc>
+      <xloc>200</xloc>
+      <yloc>329</yloc>
       </entry>
     <entry>
       <name>trans_update_liegenschaft_mutation_grundbuchplan</name>
@@ -194,8 +194,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>390</xloc>
-      <yloc>37</yloc>
+      <xloc>381</xloc>
+      <yloc>120</yloc>
       </entry>
     <entry>
       <name>trans_delete_insert_part_2_grundbuchplan</name>
@@ -223,8 +223,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>527</xloc>
-      <yloc>240</yloc>
+      <xloc>518</xloc>
+      <yloc>329</yloc>
       </entry>
     <entry>
       <name>trans_update_grenzpunkt_mutation_grundbuchplan</name>
@@ -252,8 +252,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>723</xloc>
-      <yloc>36</yloc>
+      <xloc>714</xloc>
+      <yloc>119</yloc>
       </entry>
     <entry>
       <name>trans_delete_insert_part_3_grundbuchplan</name>
@@ -281,8 +281,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>830</xloc>
-      <yloc>252</yloc>
+      <xloc>849</xloc>
+      <yloc>328</yloc>
       </entry>
     <entry>
       <name>trans_update_grundstueckpos_mutation_grundbuchplan</name>
@@ -310,8 +310,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1051</xloc>
-      <yloc>35</yloc>
+      <xloc>1042</xloc>
+      <yloc>118</yloc>
       </entry>
     <entry>
       <name>trans_vacuum_grundbuchplan</name>
@@ -339,8 +339,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1186</xloc>
-      <yloc>259</yloc>
+      <xloc>1183</xloc>
+      <yloc>326</yloc>
       </entry>
     <entry>
       <name>trans_reindex_grundbuchplan</name>
@@ -368,8 +368,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1347</xloc>
-      <yloc>46</yloc>
+      <xloc>1338</xloc>
+      <yloc>129</yloc>
       </entry>
   </entries>
   <hops>
@@ -456,5 +456,15 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>* Reihenfolge ist wichtig!
+* Daten werden in Tabellen gemeindeweise gelöscht und wieder eingefügt. 
+* Zwischendurch muss anschliessend noch in Tabellen der &quot;in Mutation&quot;-Flag auf &quot;true
+gesetzt werden.</note>
+      <xloc>136</xloc>
+      <yloc>482</yloc>
+      <width>480</width>
+      <heigth>62</heigth>
+    </notepad>
   </notepads>
 </job>
