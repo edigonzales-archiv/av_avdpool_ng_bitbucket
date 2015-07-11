@@ -126,12 +126,12 @@ public class App
 						
 						// LV03 -> LV95
 						Path federationFilePathLV95 = Paths.get(federationDirLV95, "ch_lv95_" + fileName.substring(0, 6) + ".itf");
-						Ili2FreeFrame ili2freeframe = new Ili2FreeFrame("DM01AVCH24LV95D", federationFilePathLV03.toString(), federationFilePathLV95.toString());
-						ili2freeframe.transform();
+//						Ili2FreeFrame ili2freeframe = new Ili2FreeFrame("DM01AVCH24LV95D", federationFilePathLV03.toString(), federationFilePathLV95.toString());
+//						ili2freeframe.transform();
 						
 						Path cantonFilePathLV95 = Paths.get(cantonDirLV95, "lv95_" + fileName.substring(0, 6) + ".itf");
-						ili2freeframe = new Ili2FreeFrame("DM01AVSO24LV95", cantonFilePathLV03.toString(), cantonFilePathLV95.toString());
-						ili2freeframe.transform();
+//						ili2freeframe = new Ili2FreeFrame("DM01AVSO24LV95", cantonFilePathLV03.toString(), cantonFilePathLV95.toString());
+//						ili2freeframe.transform();
 
 
 					// exceptions for each loop (file)
