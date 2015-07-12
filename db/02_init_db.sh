@@ -3,7 +3,7 @@
 SUPERUSER="stefan"
 
 ADMIN="stefan"
-ADMINPWD="malice"
+ADMINPWD="ziegler12"
 USER="mspublic"
 USERPWD="mspublic"
 
